@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("*")
+const prefix = ("*")
 
 bot.on('ready', function() {
     bot.user.setGame("MANGER | *aide");
