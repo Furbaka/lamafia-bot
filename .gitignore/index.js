@@ -46,18 +46,5 @@ bot.on('message', message => {
     if (message.content === prefix + "troprigolo"){
         message.channel.sendMessage("JE T'AIME PAS !");
         console.log("Commande effectué");
-    }
-    
-    if (message.content == "DO YOU KNOW DA WAE ?" || message.content == "do you know da wae ?" || message.content == "DO YOU KNOW DA WAE" || message.content == "do you know da wae" ){
-        message.channel.sendMessage("Follow me ma brudda, I know da wae ! /n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
-    }
-
-    if (message.content == "pates" || message.content == "burger" || message.content == "pizza" ||  message.content == "pâtes"){
-        message.reply("Arrête de parler de bouffe j'ai faim :/");
-    }
-    
-    if (message.content == "DAB" || message.content == "dab"){
-        message.channel.sendMessage("LE DAB NÉ PAS MORT");
-    }
-    
+    }    
 });
