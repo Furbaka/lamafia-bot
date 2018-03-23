@@ -35,7 +35,6 @@ bot.on('message', message => {
             .setColor("0xF4D03F")
             .setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed);
-    
 
     }
 
