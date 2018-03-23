@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const prefix = ("*")
+var prefix = ("*")
 
 bot.on('ready', function() {
     bot.user.setGame("MANGER | *aide");
@@ -59,15 +59,5 @@ bot.on('message', message => {
     if (message.content == "DAB" || message.content == "dab"){
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
-
-    if (message.content == "BOT" || message.content == "bot"){
-        message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
-    }
     
-    if (message.content == "Quelle heure il est ?" || message.content == "quelle heure il est ?" || message.content == "Quelle heure il est " ||message.content == "quelle heure il est ?" || message.content == "QUELLE HEURE IL EST ?" || message.content.startsWith == "il est quelle heure") {
-        message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
-    }
-    if (message.content == "WAW" || message.content == "wow" || message.content == "woaw" || message.content == "WOW" || message.content == "waw"){
-        message.reply("T'as vu, c'est dingue !");
-    }
 });
