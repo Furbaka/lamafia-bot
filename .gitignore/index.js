@@ -1,13 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setGame("MANGER | *aide");
+    bot.user.setGame("Command: :help");
     console.log("Connected");
 });
 
-bot.login(process.env.TOKEN);
+bot.login("NDI0NjIxMTg2NzM2MDYyNDY1.DZbiSg.6Ph_maN3RizXETHqeDT3fNAsVyk");
 
 
 bot.on('message', message => {
@@ -16,16 +17,10 @@ bot.on('message', message => {
         var embed2 = new Discord.RichEmbed()
             .setTitle("AIDE")
             .setDescription("COMMANDES")
-            .addField("FUN", "*rigolo | *troprigolo")
             .addField("UTILES", "*info (pour voir les informations du serveurs) | *avatar (pour avoir votre PP) | *aide (bah... pour l'aide quoi.)")
             .setColor("0xF4D03F")
             .setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
-    }
-
-    if (message.content === prefix + "rigolo"){
-        message.channel.sendMessage("TU ES MOCHE !");
-        console.log("Commande effectué");
     }
 
     if (message.content === prefix + "info"){
@@ -44,9 +39,5 @@ bot.on('message', message => {
      // Send the user's avatar URL
         message.reply(message.author.avatarURL);
     }
-        
-    if (message.content === prefix + "troprigolo"){
-        message.channel.sendMessage("JE T'AIME PAS !");
-        console.log("Commande effectué");
-    }
+
 });
