@@ -8,6 +8,8 @@ bot.on('ready', function() {
     console.log("Connected");
 });
 
+bot.login(process.env.TOKEN)
+
 bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
@@ -46,5 +48,21 @@ bot.on('message', message => {
     if (message.content === prefix + "troprigolo"){
         message.channel.sendMessage("JE T'AIME PAS !");
         console.log("Commande effectué");
+    }
+
+    if (message.content.startsWith( prefix + "question" ) ) {
+        if(!args[2]) return message.reply("Merci de poser une question !");
+        let replies = ["Oui !", "Nope !", "Je sais pas :/", "Je...... suis occupé... :/"];
+    
+        let result = Math.floor((Math.random() * replies.length));
+        let question = args.slice(1).join(" ");
+    
+        let ballembed = new DiscordAPIError.RichEmbed()
+        .setAuthor(message.author.tag)
+        .setColor("#FF9900")
+        .addField("Question", question)
+        .addField("Answer", replies[result]);
+    
+        message.channel.send(ballembed);
     }    
 });
