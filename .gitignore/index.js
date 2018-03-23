@@ -40,4 +40,4 @@ bot.on('message', message => {
         message.reply(message.author.avatarURL);
     }
 
-});
+})
