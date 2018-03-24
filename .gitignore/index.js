@@ -83,9 +83,9 @@ bot.on('message', message => {
 										"Saviez-vous que vous connaissez tous les visages rencontrés durant vos rêves et qu'il est impossible d'en inventer ? Rappelez-vous des créatures et démons de vos cauchemars."];
 
 	var result = Math.floor((Math.random() * sayings.length) + 0);
-	var embed = new Discord.RichEmbed()
+	var creepy = new Discord.RichEmbed()
             .setTitle("J'AI PEUR !")
             .setDescription(sayings[result])
-	message.channel.sendEmbed(sayings[result]);
+	message.channel.sendEmbed(creepy);
     }
 });
