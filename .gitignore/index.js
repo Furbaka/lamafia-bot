@@ -124,6 +124,6 @@ exports.run = (client, message, args, tools) => {
                 .addField('Kills Par Minutes', data.lifetimeStats[12].value, true)
                 .addField('Temps de Jeu', data.lifetimeStats[13].value, true)
 
-        message.send.sendEmbed(fnbrstats)
+        message.channel.sendEmbed(fnbrstats)
         
 }))}}
