@@ -1,5 +1,3 @@
-const Fortnite = require('fortnite');
-const stats = new Fortnite(process.env.TFTN)
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
