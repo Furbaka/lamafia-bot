@@ -110,8 +110,8 @@ exports.run = (client, message, args, tools) => {
 
         stats.getInfo(username, plateform.then( data => {
 
-            const fnbrstats = new Discord.MessageEmbed()
-                .setColor(0xffffff)
+	const fnbrstats = new Discord.MessageEmbed()
+		.setColor(0xffffff)
                 .setTitle(`Stats de ${data.username}`)
                 .setDescription(`**Tops**\n\n**Top 3:** *${data.lifetimeStats[0].value}*\n**Top 5:** *${data.lifetimeStats[1].value}*\n**Top 6:** *${data.lifetimeStats[3]}*\n++Top 12:** *${data.lifetimeStats[4].value}*\n**Top 25:** *${data.lifetimeStats[5].value}*`,true )
                 .setThumbnail('https://cdn2.unrealengine.com/Fortnite%2Fblog%2Fv3-3-patch-notes%2FSupplyLlama_Social-1200x628-85adf3d5a61880bc81893caf620486f0b3d8edc4.jpg')
@@ -123,6 +123,7 @@ exports.run = (client, message, args, tools) => {
                 .addField('K/D Ratio', data.lifetimeStats[11].value, true)
                 .addField('Kills Par Minutes', data.lifetimeStats[12].value, true)
                 .addField('Temps de Jeu', data.lifetimeStats[13].value, true)
-        
+
+        message.send.sendEmbed(fnbrstats)
         
 }))}}
