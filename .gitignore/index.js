@@ -74,20 +74,15 @@ bot.on('message', message => {
         message.reply("T'as vu, c'est dingue !");
     }
     
-    if (message.content.startsWith( prefix + "question" ) ) {
-        if(!args[2]) return message.reply("Merci de poser une question"); {
-        let replies = ["Oui !", "Nope !", "Je sais pas :/", "Je...... suis occupé... :/"];
+    if (message.content === "*creepy") {
+    	var sayings = ["Mon père m'a souvent mis en garde contre les sosies avant de mourir. Je l'ai vu traverser la rue avec moi.",
+										"Mon père est tombé dans le puits. Je n'étais pas inquiet jusqu'à ce que j'entende des craquements d'os au fond.",
+										"Ce n'était pas à cause du virus que les gens ont commencé à s'entre-dévorer. C'était à cause du goût.",
+										"Remettez les miroirs. Vous regarder nous manque.",
+										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
+										"Saviez-vous que vous connaissez tous les visages rencontrés durant vos rêves et qu'il est impossible d'en inventer ? Rappelez-vous des créatures et démons de vos cauchemars."];
 
-        let result = Math.floor((Math.random() * replies.length));
-        let question = args.slice(1).join(" ");
-
-        let ballembed = new DiscordAPIError.RichEmbed()
-        .setAuthor(message.author.tag)
-        .setColor("#FF9900")
-        .addField("Question", question)
-        .addField("Answer", replies[result]);
-
-        message.channel.send(ballembed);
-    }}
-    
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			bot.reply(message, sayings[result]);
+    }
 });
