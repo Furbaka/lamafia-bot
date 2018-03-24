@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setTitle("AIDE")
             .setDescription("COMMANDES")
             .addField("FUN", "*rigolo | *troprigolo | *creepy")
-            .addField("UTILES", "*info (pour voir les informations du serveurs) | *avatar (pour avoir votre PP) | *aide (bah... pour l'aide quoi.)")
+            .addField("UTILES", "*info (pour voir les informations du serveurs)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)")
             .setColor("0xF4D03F")
             .setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
