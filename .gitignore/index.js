@@ -94,8 +94,6 @@ bot.on('message', message => {
 			message.channel.sendMessage(sayings[result]);
     }
 	
-});
-
 exports.run = (client, message, args, tools) => {
     if (message.content.startsWith == prefix + "fortnite") {
         let platform;
@@ -125,5 +123,4 @@ exports.run = (client, message, args, tools) => {
                 .addField('Temps de Jeu', data.lifetimeStats[13].value, true)
 
         message.channel.sendEmbed(fnbrstats)
-        
-}))}}
+}))}}});
