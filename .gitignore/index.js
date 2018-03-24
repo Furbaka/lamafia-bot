@@ -89,6 +89,6 @@ bot.on('message', message => {
 										"Saviez-vous que vous connaissez tous les visages rencontrés durant vos rêves et qu'il est impossible d'en inventer ? Rappelez-vous des créatures et démons de vos cauchemars."];
 
 			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage("```fix\n" + sayings[result]+ "\n```fix");
+			message.channel.sendMessage("```fix\n" + sayings[result]+ "\n```);
     }
 });
