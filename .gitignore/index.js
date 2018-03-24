@@ -81,8 +81,7 @@ bot.on('message', message => {
 										"Remettez les miroirs. Vous regarder nous manque.",
 										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
 										"Saviez-vous que vous connaissez tous les visages rencontrés durant vos rêves et qu'il est impossible d'en inventer ? Rappelez-vous des créatures et démons de vos cauchemars."];
-
-	var result = Math.floor((Math.random() * sayings.length) + 0);
-	message.reply(sayings[result]);
+		var result = Math.floor((Math.random() * sayings.length) + 0);
+		message.reply(sayings[result]);
     }
 });
