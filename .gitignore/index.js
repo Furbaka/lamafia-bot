@@ -73,4 +73,21 @@ bot.on('message', message => {
     if (message.content == "WAW" || message.content == "wow" || message.content == "woaw" || message.content == "WOW" || message.content == "waw"){
         message.reply("T'as vu, c'est dingue !");
     }
+    
+    if (message.content.startsWith( prefix + "question" ) ) {
+    if(!args[2]) return message.reply("Merci de poser une question") {
+    let replies = ["Oui !", "Nope !", "Je sais pas :/", "Je...... suis occupé... :/"];
+
+    let result = Math.floor((Math.random() * replies.length));
+    let question = args.slice(1).join(" ");
+
+    let ballembed = new DiscordAPIError.RichEmbed()
+    .setAuthor(message.author.tag)
+    .setColor("#FF9900")
+    .addField("Question", question)
+    .addField("Answer", replies[result]);
+
+    message.channel.send(ballembed);
+    }}
+    
 });
