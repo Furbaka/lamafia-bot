@@ -125,4 +125,4 @@ exports.run = (client, message, args, tools) => {
             .addField('Temps de Jeu', data.lifetimeStats[13].value, true)
         
 
-    }))}
+}))}
