@@ -95,4 +95,33 @@ bot.on('message', message => {
     if (message.content == prefix + "DevCommu"){
         message.guild.channels.find("name", "📰partenariats📰").sendMessage("Bonjour bonsoir @everyone, comment allez vous ? Aujourd'hui j'ai l'immense plaisir de vous présenter le serveur de <@397364192908410880>, un serveur communautaire nommé CodeCommunity_ Celui ci comporte la communauté de la TEAM de développement web, @CodeGroup. En effet, CodeGroup est une équipe de développeurs web, réalisant des projets et apprenant ensemble. Celle-ci comporte plus de 10 membres et recrute d'avantage. Si tu es intéressé par cette fameuse TEAM de développement, je t'invite donc à lire l'annonce pixelsads situé dans le serveur communautaire. Voila, j'ai tout dis :v:\nhttps://discord.gg/m8UvDDE");
     }
+	
+    if (message.content == prefix + "blague") {
+	var sayings = ["Quelle est la plus intelligente, la blonde, la rousse ou la brune ?\n**La rousse parce que c’est un dictionnaire.**",
+										"Un monsieur visite un musée. Soudain il s'arrête et dit au guide :\n- Ah, c'est moche !\n- C'est du Picasso, répond le guide.\nPlus loin, il s'écrie de nouveau :\n- Ah, c'est vraiment moche !\n- Ca Monsieur, c'est un miroir !",
+										"Un chien et un homme son sur un bateau. Le chien pète, l'homme tombe à l'eau et se noie. Quelle est la race du chien ?\n**Un pékinois. (un pet qui noie)**",
+		       								"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!",
+										"Un gars dit à un autre dans un troquet :\n- T'es con toi ! T'es vraiment con ! C'est pas possible ce que t'es con ! J'ai jamais vu un con pareil ! Tiens, c'est simple, s'il existait un concours de cons, tu finirais deuxième !\n- Pourquoi deuxième ?\n- Parce que t'es trop con pour finir premier !",
+		       								"Un jour Dieu dit à Casto de ramer.\nEt depuis, **castorama**...",
+										"Qu'est-ce qu'une manifestation d'aveugles ?\n**Un festival de Cannes**",
+		       								"<<Maman ! Maman ! Ma poupée parle !>> <<Je sais, ma chérie.>> La voix de Maman venait de la poupée.Dans un hôpital, deux fous jouent aux cartes. Soudain, une infirmière arrive avec une seringue. L'un des deux fous s'écrie :\n- Tiens, voilà la dame de pique !",
+										"Quelle est la différence entre une échelle et un pistolet ?\n**L'échelle sert à monter, le pistolet sert à descendre.**",
+										"Remettez les miroirs. Vous regarder nous manque.",
+										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
+										"Une camionnette, c'est un petit camion.\nUne fourchette, c'est une petite fourche.\nUne barrette, c'est une petite barre.\nAlors qu'est qu'une salopette?"];
+
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
+    }
+	
+    if (message.content == xD || message.content == xd || message.content == lol || message.content == mdr || message.content == ptdr) {
+	var sayings = ["jui mort",
+										"xdptdr",
+										"lol",
+		       								"lel",
+										"pfff xD",
+		       								"xD",
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
+    }
 });
