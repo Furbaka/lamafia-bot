@@ -110,18 +110,18 @@ bot.on('message', message => {
 										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
 										"Une camionnette, c'est un petit camion.\nUne fourchette, c'est une petite fourche.\nUne barrette, c'est une petite barre.\nAlors qu'est qu'une salopette?"];
 
-			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayingsblague[result]);
+			var resultblague = Math.floor((Math.random() * sayingsblague.length) + 0);
+			message.channel.sendMessage(sayingsblague[resultblague]);
     }
 	
     if (message.content == xD || message.content == xd || message.content == lol || message.content == mdr || message.content == ptdr) {
 	var sayingsxd = ["jui mort",
-				"xdptdr",
-				"lol",
-		       		"lel",
-				"pfff xD",
-		       		"xD"];
-			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayingsxd[result]);
+										"xdptdr",
+										"lol",
+		       								"lel",
+										"pfff xD",
+		       								"xD"];
+			var resultxd = Math.floor((Math.random() * sayingsxd.length) + 0);
+			message.channel.sendMessage(sayingsxd[resultxd]);
     }
 });
