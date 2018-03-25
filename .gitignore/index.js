@@ -97,7 +97,7 @@ bot.on('message', message => {
     }
 	
     if (message.content == prefix + "blague") {
-	var sayingsblague = ["Quelle est la plus intelligente, la blonde, la rousse ou la brune ?\n**La rousse parce que c’est un dictionnaire.**",
+	var sayings = ["Quelle est la plus intelligente, la blonde, la rousse ou la brune ?\n**La rousse parce que c’est un dictionnaire.**",
 										"Un monsieur visite un musée. Soudain il s'arrête et dit au guide :\n- Ah, c'est moche !\n- C'est du Picasso, répond le guide.\nPlus loin, il s'écrie de nouveau :\n- Ah, c'est vraiment moche !\n- Ca Monsieur, c'est un miroir !",
 										"Un chien et un homme son sur un bateau. Le chien pète, l'homme tombe à l'eau et se noie. Quelle est la race du chien ?\n**Un pékinois. (un pet qui noie)**",
 		       								"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!",
@@ -110,18 +110,18 @@ bot.on('message', message => {
 										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
 										"Une camionnette, c'est un petit camion.\nUne fourchette, c'est une petite fourche.\nUne barrette, c'est une petite barre.\nAlors qu'est qu'une salopette?"];
 
-			var resultblague = Math.floor((Math.random() * sayingsblague.length) + 0);
-			message.channel.sendMessage(sayingsblague[resultblague]);
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
     }
 	
-    if (message.content == xD || message.content == xd || message.content == lol || message.content == mdr || message.content == ptdr) {
-	var sayingsxd = ["jui mort",
+    if (message.content == xD) {
+	var sayings = ["jui mort",
 										"xdptdr",
 										"lol",
 		       								"lel",
 										"pfff xD",
 		       								"xD"];
-			var resultxd = Math.floor((Math.random() * sayingsxd.length) + 0);
-			message.channel.sendMessage(sayingsxd[resultxd]);
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
     }
 });
