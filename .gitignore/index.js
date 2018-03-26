@@ -111,7 +111,7 @@ bot.on('message', message => {
 										"Une camionnette, c'est un petit camion.\nUne fourchette, c'est une petite fourche.\nUne barrette, c'est une petite barre.\nAlors qu'est qu'une salopette?"];
 
 			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayings[result]);
+			message.channel.send(sayings[result]);
     }
 	
     if (message.content == xD) {
@@ -122,6 +122,6 @@ bot.on('message', message => {
 										"pfff xD",
 		       								"xD"];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayings[result]);
+			message.channel.send(sayings[result]);
     }
 });
