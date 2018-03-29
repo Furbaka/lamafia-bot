@@ -4,7 +4,6 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', () => {
-	bot.user.setUsername("L↓GHT BOT");
         var opts = {
                 name: '*aide',
                 url: 'https://www.lightlife.wix.com/bot',
