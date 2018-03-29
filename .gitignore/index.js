@@ -4,13 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', () => {
-        var opts = {
-                name: '*aide',
-                url: 'https://www.lightlife.wix.com/bot',
-                type: 1
-        };
-
-        client.setStatus(null, opts);
+        bot.setStatus('online', 'MANGER | *aide');
 });
 
 bot.login(process.env.TOKEN)
