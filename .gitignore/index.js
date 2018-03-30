@@ -103,27 +103,8 @@ bot.on('message', message => {
     }
 	
     if (message.content == "!%!CGames"){
-        message.channel.sendMessage("```Bonjour/Bonsoir @everyone 👋```\n\n**<@339804940056920064> vient de créer un serveur  !**\n\n__Qui se nomme :__\n\n**Community Games**\n```\nCe serveur consiste aider la communauté de Critical Ops, Rules Of Survival, Fortnite,PUBG et autre qui arriveront :\n\n- Avoir une discussion plus facile entre joueur\n\n- Des salons dédiés au demandes de ranked, scrim (Critical Ops)\n\nDuo, Squad (Rules Of Survival, Fortnite, PUBG, PUBG Mobile)\n```\n\n```\n\naussi un serveur "detente" :\n\n- Musique \n\n- Jeux \n\n- Discussions entre joueur\n\n- Une multitude de BOT est a votre disposition\n```\n\n⚠️ Le serveur est en cours de développement ⚠\n\nDonc si vous rencontrez des bugs, n’hésitez pas a nous en informer !\n\n\nInvitation : https://discord.gg/NZn6Vj3");
+        message.channel.sendMessage("```Bonjour/Bonsoir @everyone 👋```\n\n**<@339804940056920064> vient de créer un serveur  !**\n\n__Qui se nomme :__\n\n**Community Games**\n```\nCe serveur consiste aider la communauté de Critical Ops, Rules Of Survival, Fortnite,PUBG et autre qui arriveront :\n\n- Avoir une discussion plus facile entre joueur\n\n- Des salons dédiés au demandes de ranked, scrim (Critical Ops)\n\nDuo, Squad (Rules Of Survival, Fortnite, PUBG, PUBG Mobile)\n```\n\n```\n\naussi un serveur "detente" :\n\n- Musique \n\n- Jeux \n\n- Discussions entre joueur\n\n- Une multitude de BOT est a votre disposition\n```\n\n⚠️ Le serveur est en cours de développement ⚠\n\nDonc si vous rencontrez des bugs, n’hésitez pas a nous en informer !\n\nInvitation : https://discord.gg/NZn6Vj3");
     }
-	
-	
-    //if (message.content == prefix + "blague") {
-	//var sayings = ["Quelle est la plus intelligente, la blonde, la rousse ou la brune ?\n**La rousse parce que c’est un dictionnaire.**",
-	//									"Un monsieur visite un musée. Soudain il s'arrête et dit au guide :\n- Ah, c'est moche !\n- C'est du Picasso, répond le guide.\nPlus loin, il s'écrie de nouveau :\n- Ah, c'est vraiment moche !\n- Ca Monsieur, c'est un miroir !",
-	//									"Un chien et un homme son sur un bateau. Le chien pète, l'homme tombe à l'eau et se noie. Quelle est la race du chien ?\n**Un pékinois. (un pet qui noie)**",
-	//	       								"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!",
-//										"Un gars dit à un autre dans un troquet :\n- T'es con toi ! T'es vraiment con ! C'est pas possible ce que t'es con ! J'ai jamais vu un con pareil ! Tiens, c'est simple, s'il existait un concours de cons, tu finirais deuxième !\n- Pourquoi deuxième ?\n- Parce que t'es trop con pour finir premier !",
-//		       								"Un jour Dieu dit à Casto de ramer.\nEt depuis, **castorama**...",
-//										"Qu'est-ce qu'une manifestation d'aveugles ?\n**Un festival de Cannes**",
-//		       								"<<Maman ! Maman ! Ma poupée parle !>> <<Je sais, ma chérie.>> La voix de Maman venait de la poupée.Dans un hôpital, deux fous jouent aux cartes. Soudain, une infirmière arrive avec une seringue. L'un des deux fous s'écrie :\n- Tiens, voilà la dame de pique !",
-//										"Quelle est la différence entre une échelle et un pistolet ?\n**L'échelle sert à monter, le pistolet sert à descendre.**",
-//										"Remettez les miroirs. Vous regarder nous manque.",
-//										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
-//										"Une camionnette, c'est un petit camion.\nUne fourchette, c'est une petite fourche.\nUne barrette, c'est une petite barre.\nAlors qu'est qu'une salopette?"];
-//
-//			var result = Math.floor((Math.random() * sayings.length) + 0);
-//			message.channel.send(sayings[result]);
-  //  }
 	
     if (message.content == "xD" || message.content == "lol"){
 	message.channel.sendMessage("jui mort X)");
