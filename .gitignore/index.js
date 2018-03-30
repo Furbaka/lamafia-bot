@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', () => {
-	bot.user.setGame(`être sur ${bot.guilds.size} serveurs | *aide`);
+	bot.user.setGame(`être sur ${bot.guilds.size} serveurs | *`);
 });
 
 bot.login(process.env.TOKEN)
