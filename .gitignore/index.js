@@ -18,7 +18,7 @@ bot.on('message', message => {
 		.setDescription("COMMANDES")
 		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
 		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
-		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)https://discord.gg/apjU2vb")
+		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)https://discord.gg/apjU2vb", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
