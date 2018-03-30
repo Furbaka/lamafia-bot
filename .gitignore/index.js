@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', () => {
-	bot.user.setGame(`être sur ${client.guilds.size} serveurs | *aide`);
+	bot.user.setGame(`être sur ${bot.guilds.size} serveurs | *aide`);
 });
 
 bot.login(process.env.TOKEN)
@@ -13,13 +13,13 @@ bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
-	    .setThumbnail(bot.user.avatarURL)
-            .setTitle("AIDE")
-            .setDescription("COMMANDES")
-            .addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-            .addField("UTILES", "*info (pour voir les informations du serveurs)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)")
-            .setColor("0xF4D03F")
-            .setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
+	.setThumbnail(bot.user.avatarURL)
+	.setTitle("AIDE")
+	.setDescription("COMMANDES")
+	.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
+	.addField("UTILES", "*info (pour voir les informations du serveurs)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)")
+	.setColor("0xF4D03F")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
     }
 
