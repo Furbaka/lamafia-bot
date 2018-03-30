@@ -13,6 +13,7 @@ bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
+	    .setThumbnail(bot.user.avatarURL)
             .setTitle("AIDE")
             .setDescription("COMMANDES")
             .addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
