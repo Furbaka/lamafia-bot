@@ -16,8 +16,8 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
-		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
+		.addField("FUN", "*rigolo | *troprigolo | *creepy")
+		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
@@ -112,5 +112,15 @@ bot.on('message', message => {
 	
     if (message.content == "xD" || message.content == "lol"){
 	message.channel.sendMessage("jui mort X)");
+    }
+    if (message.content === prefix + "invite"){
+        var embed2 = new Discord.RichEmbed()
+		.setThumbnail(bot.user.avatarURL)
+		.setTitle("INVITE")
+		.setDescription("AJOUTER LE BOT A VOTRE SERVEUR !")
+		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
+		.setColor("0xF4D14F")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
+        message.channel.sendEmbed(embed2);
     }
 });
