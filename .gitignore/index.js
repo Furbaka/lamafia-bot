@@ -7,7 +7,7 @@ bot.on('ready', () => {
 	bot.user.setGame(`${bot.guilds.size} serveurs | *aide`);
 });
 
-bot.login(process.env.TOKEN)
+}
 
 bot.on('message', message => {
     
