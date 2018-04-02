@@ -61,18 +61,18 @@ bot.on('message', message => {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content == "DAB" || message.content == "dab"){
+    if (message.content.includes("dab")) {
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
 
-    if (message.content == "BOT" || message.content == "bot"){
+    if (message.content.includes("BOT") || message.content.includes("bot")) {
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if (message.content == "Quelle heure il est ?" || message.content == "quelle heure il est ?" || message.content == "Quelle heure il est " ||message.content == "quelle heure il est ?" || message.content == "QUELLE HEURE IL EST ?" || message.content.startsWith == "il est quelle heure") {
+    if (message.content.includes("heure")) {
         message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content == "WAW" || message.content == "wow" || message.content == "woaw" || message.content == "WOW" || message.content == "waw"){
+    if (message.content.includes("wow") || message.content.includes("waw") || message.content.includes("woaw")){
         message.reply("T'as vu, c'est dingue !");
     }
 
@@ -121,7 +121,7 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed2);
     }
     
-    if (message.content.includes("xD")) {
+    if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
     	var sayings = ["jui mort X)",
 										"ptdr",
 										"C'est pas drôle",
