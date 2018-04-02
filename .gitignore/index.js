@@ -53,11 +53,11 @@ bot.on('message', message => {
         console.log("Commande effectué");
     }
     
-    if (message.content == "DO YOU KNOW DA WAE ?" || message.content == "do you know da wae ?" || message.content == "DO YOU KNOW DA WAE" || message.content == "do you know da wae" ){
+    if (message.content.includes("WAE")){
         message.channel.sendMessage("Follow me ma brudda, I know da wae !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
     }
 
-    if (message.includes("PATES") || message.includes("BURGER") || message.includes("PIZZA") ||  message.contentincludes("PÂTES")){
+    if (message.includes("PATES") || message.includes("BURGER") || message.includes("PIZZA") ||  message.contentincludes("PÂTES")) {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
@@ -118,18 +118,18 @@ bot.on('message', message => {
 		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
-        message.channel.sendEmbed(embed3);
+        member.sendEmbed(embed3);
     }
 
     if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
-    	var sayings2 = ["jui mort X)",
+    	var sayings = ["jui mort X)",
 										"ptdr",
 										"C'est pas drôle",
-		       							"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
+		       								"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
 										"Ahah",
-		       							"jui mort x)"];
+		       								"jui mort x)"];
 
-			var result2 = Math.floor((Math.random() * sayings2.length) + 0);
-			message.channel.sendMessage(sayings2[result2]);
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
     }
 });
