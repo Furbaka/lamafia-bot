@@ -109,10 +109,7 @@ bot.on('message', message => {
     if (message.content == "!%!LightLife"){
         message.channel.sendMessage("__***👾 L↓GHT L↑FE 👾***__ **Recrutement :x:**\n🗺️ CLIQUEZ SUR CE LIEN INCROYABLE POUR COMMENCER L'AVENTURE https://discord.gg/apjU2vb 🗺️\n\n__L↓GHT L↑FE vous de permet de :__\n\n```htm\n📌Rencontrez vos futurs amis et vos futurs rivaux ! | 😄💬 ⇝ 🎭🎭�\n📌Discuter avec plein de gens (pis voir du hentai) ! | 😄💬 ⇝ 😄💬\n📌Jouer sur des jeux avec d'autres joueurs ! | 🎮 ⇝ 🎮⚔️️🎮\n📌Avoir un grade STAR si vous êtes STREAMER/VIDEASTE ! | 📹‍ ⇝ ‍‍‍‍👯‍😎👯‍\n```\n\n🤜 Sur L↓GHT L↑FE vous êtes (PRESQUE) libre de faire votre pub ! | 📰 ⇝ 🤑\n\n👉 ***En plus on a un bot perso qui est très rigolo !*** | 🤖💬 ⇝ 🤣\n\n🔗 CLIQUEZ SUR CE LIEN POUR REJOINDRE LE SERVEUR https://discord.gg/apjU2vb 🔗\n\n\nServeur de <@328514801124900866>\n@everyone");
     }
-	
-    if (message.content == "xD" || message.content == "lol"){
-	message.channel.sendMessage("jui mort X)");
-    }
+
     if (message.content === prefix + "invite"){
         var embed2 = new Discord.RichEmbed()
 		.setThumbnail(bot.user.avatarURL)
@@ -123,6 +120,7 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed2);
     }
+    
     if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
     	var sayings2 = ["jui mort X)",
 										"ptdr",
