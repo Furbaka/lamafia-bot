@@ -57,7 +57,7 @@ bot.on('message', message => {
         message.channel.sendMessage("Follow me ma brudda, I know da wae !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
     }
 
-    if (message.content == "pates" || message.content == "burger" || message.content == "pizza" ||  message.content == "pâtes"){
+    if (message.includes ("pates") || message.content == "burger" || message.content == "pizza" ||  message.content == "pâtes"){
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
@@ -122,5 +122,16 @@ bot.on('message', message => {
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed2);
+    }
+    if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
+    	var sayings2 = ["jui mort X)",
+										"ptdr",
+										"C'est pas drôle",
+		       							"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
+										"Ahah",
+		       							"jui mort x)"];
+
+			var result2 = Math.floor((Math.random() * sayings2.length) + 0);
+			message.channel.sendMessage(sayings2[result2]);
     }
 });
