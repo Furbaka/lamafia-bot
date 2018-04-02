@@ -7,6 +7,8 @@ bot.on('ready', () => {
 	bot.user.setGame(`${bot.guilds.size} serveurs | *aide`);
 });
 
+bot.login(process.env.TOKEN)
+
 bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
@@ -55,22 +57,22 @@ bot.on('message', message => {
         message.channel.sendMessage("Follow me ma brudda, I know da wae !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
     }
 
-    if (message.content.includes("pates") || message.content.includes("burger") || message.content.includes("pâtes") || message.content.includes("pizza"))  {
+    if (message.includes ("pates") || message.content == "burger" || message.content == "pizza" ||  message.content == "pâtes"){
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes("dab")) {
+    if (message.content == "DAB" || message.content == "dab"){
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
 
-    if (message.content.includes("BOT") || message.content.includes("bot")) {
+    if (message.content == "BOT" || message.content == "bot"){
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if (message.content.includes("heure")) {
+    if (message.content == "Quelle heure il est ?" || message.content == "quelle heure il est ?" || message.content == "Quelle heure il est " ||message.content == "quelle heure il est ?" || message.content == "QUELLE HEURE IL EST ?" || message.content.startsWith == "il est quelle heure") {
         message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content.includes("wow") || message.content.includes("waw") || message.content.includes("woaw")){
+    if (message.content == "WAW" || message.content == "wow" || message.content == "woaw" || message.content == "WOW" || message.content == "waw"){
         message.reply("T'as vu, c'est dingue !");
     }
 
@@ -118,17 +120,16 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed2);
     }
-    
+
     if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
-    	var sayings = ["jui mort X)",
+    	var sayings2 = ["jui mort X)",
 										"ptdr",
 										"C'est pas drôle",
-		       								"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
-										"Ahah cé drol",
-		       								"jui mort x)"];
+		       							"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
+										"Ahah",
+		       							"jui mort x)"];
 
-			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayings[result]);
+			var result2 = Math.floor((Math.random() * sayings2.length) + 0);
+			message.channel.sendMessage(sayings2[result2]);
     }
-
 });
