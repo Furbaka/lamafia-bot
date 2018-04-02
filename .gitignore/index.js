@@ -121,15 +121,15 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed2);
     }
     
-    if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
-    	var sayings2 = ["jui mort X)",
-											"ptdr",
-											"C'est pas drôle",
-		       									"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
-											"Ahah cé drol",
-		       									"jui mort x)"];
+    if (message.content.includes("xD")) {
+    	var sayings = ["jui mort X)",
+										"ptdr",
+										"C'est pas drôle",
+		       								"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
+										"Ahah cé drol",
+		       								"jui mort x)"];
 
-			var result2 = Math.floor((Math.random() * sayings2.length) + 0);
-			message.channel.sendMessage(sayings2[result2]);
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result]);
     }
 });
