@@ -111,14 +111,14 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "invite"){
-        var embed2 = new Discord.RichEmbed()
+        var embed3 = new Discord.RichEmbed()
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("INVITE")
 		.setDescription("AJOUTER LE BOT A VOTRE SERVEUR !")
 		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
 		.setColor("0xF4D14F")
-		.setFooter("BOT CRÉÉ PAR <@328514801124900866>")
-        message.channel.sendEmbed(embed2);
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
+        message.channel.sendEmbed(embed3);
     }
 
     if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
