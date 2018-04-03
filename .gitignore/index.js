@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("*")
+var prefix = ("*");
 
 bot.on('ready', () => {
 	bot.user.setGame(`${bot.guilds.size} serveurs | *aide`);
 });
 
-bot.login(process.env.TOKEN)
+bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     
