@@ -35,7 +35,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "info"){
         var embed = new Discord.RichEmbed()
-		.setThumbnail(bot.server.iconURL)
+		.setThumbnail(server.iconURL)
 		.setTitle("INFO")
 		.setDescription("Information du serveur")
 		.addField("Nom", message.guild.name)
