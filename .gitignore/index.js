@@ -142,12 +142,8 @@ bot.on('message', message => {
            .setColor("0xB40404")
            .setTimestamp();
        message.channel.sendEmbed(embed);
-       .then(function (message) {
        message.react("✔");
        message.react("❌");
-    }).catch(function() {
-    }else{
-    return message.reply("Tu n'as pas la persmission.");
 }
 
 });
