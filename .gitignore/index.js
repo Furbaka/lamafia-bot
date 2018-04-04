@@ -147,7 +147,7 @@ bot.on('message', message => {
             message.react("✔");
             message.react("❌");
         }).catch(function() {
-        ));
+	});
         }else{
             return message.reply("Tu n'as pas la persmission.");
 }
