@@ -9,6 +9,10 @@ bot.on('ready', () => {
 
 bot.login(process.env.TOKEN);
 
+bot.on('guildMemberAdd', member => {
+   member.send("Bienvenue sur " + message.guild.name);
+});
+
 bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
