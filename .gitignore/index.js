@@ -57,15 +57,15 @@ bot.on('message', message => {
         console.log("Commande effectué");
     }
     
-    if (message.content.includes("WAE")){
+    if (message.content.includes("WAE") || message.content.includes("wae")){
         message.channel.sendMessage("Follow me ma brudda, I know da wae !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
     }
 
-    if (message.content.includes("PATES") || message.content.includes("BURGER") || message.content.includes("PIZZA") || message.content.includes("PÂTES")) {
+    if (message.content.includes("PATES") || message.content.includes("BURGER") || message.content.includes("PIZZA") || message.content.includes("PÂTES") || message.content.includes("pates") || message.content.includes("burger") || message.content.includes("pizza") || message.content.includes("pâtes")) {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes("DAB")){
+    if (message.content.includes("DAB") || message.content.includes("dab")){
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
 
@@ -73,10 +73,10 @@ bot.on('message', message => {
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if (message.content.includes("HEURE")) {
+    if (message.content.includes("HEURE") || message.content.includes("heure")) {
         message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content.includes("WOW") || message.content.includes("WAW")){
+    if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
         message.reply("T'as vu, c'est dingue !");
     }
 
