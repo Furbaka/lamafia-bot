@@ -35,7 +35,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "info"){
         var embed = new Discord.RichEmbed()
-		.setThumbnail(bot.user.iconURL)
+		.setThumbnail(bot.user.avatarURL)
 		.setTitle("INFO")
 		.setDescription("Information du serveur")
 		.addField("Nom", message.guild.name)
@@ -158,7 +158,7 @@ bot.on('message', message => {
        if (message.member.voiceChannel) {
          const connection = await message.member.voiceChannel.join();
        } else {
-         message.member.sendMessage('Tu dois être dans un salon vocal !');
+         message.member.sendMessage("Tu dois être dans un salon vocal !");
        }
     }
 });
