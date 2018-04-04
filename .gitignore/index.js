@@ -21,7 +21,7 @@ bot.on('message', message => {
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
-        member.sendEmbed(embed2);
+        message.member.sendEmbed(embed2);
     }
 
     if (message.content === prefix + "rigolo"){
