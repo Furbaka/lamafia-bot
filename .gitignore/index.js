@@ -144,4 +144,5 @@ bot.on('message', message => {
         const collector = pollTopic.createReactionCollector(filter, { time: 15000 });
         collector.on('collect', r => console.log(`Collected ${r.emoji.name}`));
         collector.on('end', collected => console.log(`Collected ${collected.size} items`));
+    }
 });
