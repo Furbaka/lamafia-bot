@@ -141,7 +141,7 @@ bot.on('message', message => {
                 .setDescription("Sondage")
                 .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
                 .setColor("0xB40404")
-                .setTimestamp()
+                .setTimestamp();
             message.channel.sendEmbed(embed);
             .then(function (message) {
             message.react("✔");
