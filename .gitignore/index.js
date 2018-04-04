@@ -35,7 +35,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "info"){
         var embed = new Discord.RichEmbed()
-		.setThumbnail(Discord.server.iconURL)
+		.setThumbnail(guild.server.iconURL)
 		.setTitle("INFO")
 		.setDescription("Information du serveur")
 		.addField("Nom", message.guild.name)
@@ -151,5 +151,14 @@ bot.on('message', message => {
 										"Quel est le sport préféré des Anglais ?\nLe football.\n\nQuel est le sport préféré des Australiens ?\nLe rugby.\n\nQuel est le sport préféré des Français ?\nLa pétanque.\n\nQuel est le sport préféré des Arabes ?\nTous les sports hippiques.\n**Hippique** tout..."];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
+    }
+	
+    if (message.content === prefix + "vocal") {
+    // Only try to join the sender's voice channel if they are in one themselves
+       if (message.member.voiceChannel) {
+         const connection = await message.member.voiceChannel.join();
+       } else {
+         message.member.sendMessage('Tu dois être dans un salon vocal !');
+       }
     }
 });
