@@ -152,13 +152,4 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
-	
-    if (message.content === prefix + "vocal") {
-    // Only try to join the sender's voice channel if they are in one themselves
-       if (message.member.voiceChannel) {
-         const connection = await message.member.voiceChannel.join();
-       } else {
-         message.member.sendMessage("Tu dois être dans un salon vocal !");
-       }
-    }
 });
