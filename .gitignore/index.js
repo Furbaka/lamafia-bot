@@ -16,7 +16,7 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
-		.addField("FUN", "*rigolo | *troprigolo | *creepy")
+		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
 		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
@@ -133,22 +133,15 @@ bot.on('message', message => {
 			message.channel.sendMessage(sayings[result]);
     }
 	
-    if (message.content.startWith(prefix + "sondage")) {
-       let args = message.content.split(" ").slice(1);
-       let thingToEcho = args.join(" ");
-       var embed = new Discord.RichEmbed()
-           .setDescription("Sondage")
-           .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
-           .setColor("0xB40404")
-           .setTimestamp();
-       message.channel.sendEmbed(embed);
-       .then(function(message) {
-       message.react("✔")
-       message.react("❌");
-    }).catch(function() {
-    ));
-    }else{
-    return message.reply("Tu n'as pas la persmission.");
-}
-
+    if (!args) return message.reply("You must have something to vote for!")
+    	if (!message.content.includes("?")) return message.reply("Include a ? in your vote!")
+	message.channel.send(`:ballot_box:  ${message.author.username} started a vote! React to my next message to vote on it. :ballot_box: `);
+        const pollTopic = await message.channel.send(message.content.slice(2));
+        await pollTopic.react(`✅`);
+        await pollTopic.react(`⛔`);
+        // Create a reaction collector
+        const filter = (reaction) => reaction.emoji.name === '✅';
+        const collector = pollTopic.createReactionCollector(filter, { time: 15000 });
+        collector.on('collect', r => console.log(`Collected ${r.emoji.name}`));
+        collector.on('end', collected => console.log(`Collected ${collected.size} items`));
 });
