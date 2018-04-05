@@ -53,7 +53,7 @@ bot.on('message', message => {
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
+		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*suppr <nombre> (Pour supprimer un certain nombre de messages)")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
@@ -184,6 +184,23 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
-
+	
+    if (message.content === prefix + "invite"){
+	
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+            }
+	 
+	if (message.member.hasPermission("MANAGE_MESSAGES")) {
+           var embed3 = new Discord.RichEmbed()
+		.setThumbnail(bot.user.avatarURL)
+		.setTitle("INVITE")
+		.setDescription("AJOUTER LE BOT A VOTRE SERVEUR !")
+		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
+		.setColor("0xF4D14F")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
+           message.member.sendEmbed(embed3);
+        }
+    }
 
 });
