@@ -28,6 +28,8 @@ bot.on('message', message => {
             if (isNaN(args[0])) {
 
                 message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```");
+		
+		return;
             }
 
             const fetched = await message.channel.fetchMessages({limit: args[0]});
