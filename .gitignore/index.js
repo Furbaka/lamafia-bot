@@ -14,6 +14,30 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
+
+    let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let const = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
+
+    if (msg.startsWith(prefix + 'SUPPR')) {
+
+        async function purge() {
+            message.delete();
+
+            if (isNaN(args[0])) {
+
+                message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```")
+
+            const fetched = await message.channel.fetchMessages({limit: args[0]});
+            console.log(fetched.size + " messages found, deleting...");
+
+            message.channel.bulkDelete{fetched}
+                .catch(error => message.channel.send(`Erreur: ${error}`));
+
+        }
+
+        purge();
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
@@ -152,4 +176,6 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
+
+
 });
