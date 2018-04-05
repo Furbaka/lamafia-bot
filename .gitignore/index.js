@@ -14,7 +14,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-	
+
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
@@ -24,17 +24,16 @@ bot.on('message', message => {
 
         async function purge() {
             message.delete();
-      
-	    if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-		return;
-	    }
-		
+
+            if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+            }
+
             if (isNaN(args[0])) {
 
                 message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```");
-		
-		return;
-            }
+		    return;
+	        }
 
             const fetched = await message.channel.fetchMessages({limit: args[0]});
             console.log(fetched.size + " messages found, deleting...");
@@ -98,18 +97,18 @@ bot.on('message', message => {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (msg.includes("DAB")){
+    if (message.content.includes("DAB") || message.content.includes("dab")){
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
 
-    if (msg.content == "BOT"){
+    if (message.content == "BOT" || message.content == "bot"){
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if msg.includes("HEURE")) {
+    if (message.content.includes("HEURE") || message.content.includes("heure")) {
         message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (msg.includes("WOW") || msg.includes("WAW")){
+    if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
         message.reply("T'as vu, c'est dingue !");
     }
 
