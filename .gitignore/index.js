@@ -53,7 +53,7 @@ bot.on('message', message => {
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveur)\n*invite (pour m'inviter bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*suppr <nombre> (pour supprimer un certain nombre de messages)\n*news (pour voir mes nouveautés)")
+		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
@@ -83,12 +83,7 @@ bot.on('message', message => {
      // Send the user's avatar URL
         message.reply(message.author.avatarURL);
     }
-
-    if (message.content === prefix + "bite") {
-     // Send the user's avatar URL
-        message.channel.sendMessage("T'as du travail <@328514801124900866>");
-    }
-	
+        
     if (message.content === prefix + "troprigolo"){
         message.channel.sendMessage("JE T'AIME PAS !");
         console.log("Commande effectué");
@@ -138,7 +133,11 @@ bot.on('message', message => {
     if (message.content == "!%!DevCommu"){
         message.guild.channels.find("name", "📰partenariats📰").sendMessage("Bonjour bonsoir @everyone, comment allez vous ? Aujourd'hui j'ai l'immense plaisir de vous présenter le serveur de <@397364192908410880>, un serveur communautaire nommé CodeCommunity_ Celui ci comporte la communauté de la TEAM de développement web, @CodeGroup. En effet, CodeGroup est une équipe de développeurs web, réalisant des projets et apprenant ensemble. Celle-ci comporte plus de 10 membres et recrute d'avantage. Si tu es intéressé par cette fameuse TEAM de développement, je t'invite donc à lire l'annonce pixelsads situé dans le serveur communautaire. Voila, j'ai tout dis :v:\nhttps://discord.gg/m8UvDDE");
     }
-	
+    
+    if (message.content == "!%!GameAdikt"){
+        message.channel.sendMessage("*Salut à vous* @someone\n**Je vous propose GaMe Adikt !\n\n-Un Serveur de <@306780915097403392> avec une communauté nouvelle !\n-Des recrutements de Modérateur ON !\n-Des BOTS avec des Fonctionnalités Supers Cools !\n-Des Events dans lequels tu pourras gagner des Jeux ou d'autres choses d'une importante Valeur !\n-Des gardes aux Choix avec des Channels spécifiques.\n-Un Système de Level avec les Bots et des Mise à Jours constantes !**\n\n**__Les Grades de Joueurs !__**\n\n```- Nouveaux Membres\n- Membres\n- Membres Actifs\n- Membres Accros\n- Membres Fidèles\n_ Membres ardents```\n\n**__Les BOTS__**\n```- Un Système de level !\n- Des Bots Musiques / Radios en Direct !\n- Des Channels avec des Bots pour les Coquins !\n- Des Jeux amusants et des passe-temps.\n- Des Auto-Grades / Auto-Speacker !\n- Pleins d'autres choses à découvrir !!!```\n\n```JE TE LAISSE UNE PETITE INVITATION AU CAS OU SI TU SERAIS INTERESSE PAR CE NOUVEAUX DISCORD !```\nhttps://discord.gg/DTzNf3z");
+    }
+
     if (message.content == "!%!FNBRFR"){
         message.channel.sendMessage(":pick: @everyone Création d'un nouveau serveur Fortnite FR par <@310832229469126657> :pick:\n:arrow_right:  Quel est l'interêt :question: \n- Réunir un maximum de joueurs Fortnite BR aussi bien pros que débutants.\n- Pouvoir se faire de bons partenaires de jeu et former une équipe soudée pour les tournois du serveur par exemple. \n:arrow_right: Les avantages :question:\n- Des astuces pour débutants et même pour joueurs expérimentés.\n- Des modérateurs choisis par les membres du discord.\n- De nombreux channels pour ne pas se perdre dans les informations.\n:arrow_right: Les nouveautés :interrobang: :\n\n- :trophy:  Des tournois avec des récompenses croissantes à la clé pour le 1er, 2eme et 3eme( prochain aux 200 membres ).\n- Des salons de discussions et de partage\n- Des channels pour proposer et donner son avis sur des idées afin que le discord correspondent le plus à vos attentes.\n- Et enfin une aide d'affichage de shop pour les joueurs qui le souhaitent. \n\nPlus vous serez nombreux plus les récompenses seront grandes et les tournois amusant, ainsi que le serveur ^^.\n:gun: Si vous êtes intéressés, cliquez ici ! :gun:\nhttps://discord.gg/QQfVEZD");
     }
@@ -189,17 +188,6 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
-	
-    if (message.content === prefix + "news"){
-        var embed4 = new Discord.RichEmbed()
-	       .setThumbnail(bot.user.avatarURL)
-	       .setTitle("Version 1.2")
-	       .setDescription("Voici toutes mes nouveautéss !")
-	       .addField("Ajouts", "+Beaucoup d'easter eggs\n+Commande *suppr pour supprimer des messages\n(*aide pour voir toutes les commande)\n*news pour voir mes nouveautées")
-	       .addField("Corrections", "-Je vous faisais la gueule en me déconnectant\n-Mes commandes marchaient pas tout le temps :/")
-	       .setColor("0xF4D14F")
-	       .setFooter("BOT CRÉÉ PAR MISTIGRIX... ATTEND ! QUOI ? JE SUIS UN ROBOT ?!")
-        message.member.sendEmbed(embed4);
-    }
+
 
 });
