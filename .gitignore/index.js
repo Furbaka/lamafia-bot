@@ -14,7 +14,8 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-
+    
+    let cmsg = message.member.hasPermission("MANAGE_MESSAGES");
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
@@ -24,7 +25,11 @@ bot.on('message', message => {
 
         async function purge() {
             message.delete();
-
+      
+	    if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+		return;
+	    }
+		
             if (isNaN(args[0])) {
 
                 message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```");
