@@ -38,6 +38,8 @@ bot.on('message', message => {
         }
 
         purge();
+
+    }
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
