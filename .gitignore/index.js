@@ -99,18 +99,18 @@ bot.on('message', message => {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes("DAB") || message.content.includes("dab")){
+    if (msg.includes("DAB")){
         message.channel.sendMessage("LE DAB NÉ PAS MORT");
     }
 
-    if (message.content == "BOT" || message.content == "bot"){
+    if (msg.content == "BOT"){
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if (message.content.includes("HEURE") || message.content.includes("heure")) {
+    if msg.includes("HEURE")) {
         message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
+    if (msg.includes("WOW") || msg.includes("WAW")){
         message.reply("T'as vu, c'est dingue !");
     }
 
