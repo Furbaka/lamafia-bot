@@ -83,7 +83,12 @@ bot.on('message', message => {
      // Send the user's avatar URL
         message.reply(message.author.avatarURL);
     }
-        
+
+    if (message.content === prefix + "bite") {
+     // Send the user's avatar URL
+        message.channel.sendMessage("T'as du travail <@328514801124900866>");
+    }
+	
     if (message.content === prefix + "troprigolo"){
         message.channel.sendMessage("JE T'AIME PAS !");
         console.log("Commande effectué");
