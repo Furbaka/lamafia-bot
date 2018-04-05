@@ -185,21 +185,22 @@ bot.on('message', message => {
 			message.channel.sendMessage(sayings[result]);
     }
 	
-    if (message.content === prefix + "invite"){
+    if (message.content === prefix + "news"){
 	
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+	if (!message.member.hasPermission("ADMINISTRATOR")) {
                 return;
             }
 	 
-	if (message.member.hasPermission("MANAGE_MESSAGES")) {
-           var embed3 = new Discord.RichEmbed()
+	if (message.member.hasPermission("ADMINISTRATOR")) {
+           var embed4 = new Discord.RichEmbed()
 		.setThumbnail(bot.user.avatarURL)
-		.setTitle("INVITE")
-		.setDescription("AJOUTER LE BOT A VOTRE SERVEUR !")
-		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
+		.setTitle("Version 1.2")
+		.setDescription("Voici toutes mes nouveautéss !")
+		.addField("Ajouts", "+Beaucoup d'easter eggs\n+Commande *suppr pour supprimer des messages (*aide pour voir toutes les commande)")
+	        .addField("Corrections", "-Je vous faisais la gueule en me déconnectant\n-Mes commandes marchaient pas tout le temps :/")
 		.setColor("0xF4D14F")
-		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
-           message.member.sendEmbed(embed3);
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX... ATTEND ! QUOI ? JE SUIS UN ROBOT ?!")
+           message.member.sendEmbed(embed4);
         }
     }
 
