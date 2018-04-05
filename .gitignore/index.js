@@ -53,7 +53,7 @@ bot.on('message', message => {
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*suppr <nombre> (Pour supprimer un certain nombre de messages)")
+		.addField("UTILES", "*info (pour voir les informations du serveur)\n*invite (pour m'inviter bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*suppr <nombre> (pour supprimer un certain nombre de messages)\n*news (pour voir mes nouveautés)")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
@@ -191,22 +191,15 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "news"){
-	
-	if (!message.member.hasPermission("ADMINISTRATOR")) {
-                return;
-            }
-	 
-	if (message.member.hasPermission("ADMINISTRATOR")) {
-           var embed4 = new Discord.RichEmbed()
-		.setThumbnail(bot.user.avatarURL)
-		.setTitle("Version 1.2")
-		.setDescription("Voici toutes mes nouveautéss !")
-		.addField("Ajouts", "+Beaucoup d'easter eggs\n+Commande *suppr pour supprimer des messages (*aide pour voir toutes les commande)")
-	        .addField("Corrections", "-Je vous faisais la gueule en me déconnectant\n-Mes commandes marchaient pas tout le temps :/")
-		.setColor("0xF4D14F")
-		.setFooter("BOT CRÉÉ PAR MISTIGRIX... ATTEND ! QUOI ? JE SUIS UN ROBOT ?!")
-           message.member.sendEmbed(embed4);
-        }
+        var embed4 = new Discord.RichEmbed()
+	       .setThumbnail(bot.user.avatarURL)
+	       .setTitle("Version 1.2")
+	       .setDescription("Voici toutes mes nouveautéss !")
+	       .addField("Ajouts", "+Beaucoup d'easter eggs\n+Commande *suppr pour supprimer des messages\n(*aide pour voir toutes les commande)\n*news pour voir mes nouveautées")
+	       .addField("Corrections", "-Je vous faisais la gueule en me déconnectant\n-Mes commandes marchaient pas tout le temps :/")
+	       .setColor("0xF4D14F")
+	       .setFooter("BOT CRÉÉ PAR MISTIGRIX... ATTEND ! QUOI ? JE SUIS UN ROBOT ?!")
+        message.member.sendEmbed(embed4);
     }
 
 });
