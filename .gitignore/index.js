@@ -14,8 +14,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-    
-    let cmsg = message.member.hasPermission("MANAGE_MESSAGES");
+	
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
