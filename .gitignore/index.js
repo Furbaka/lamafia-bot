@@ -20,45 +20,6 @@ bot.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
 
-    if (msg.startsWith(prefix + 'SUPPR')) {
-
-        async function purge() {
-            message.delete();
-
-            if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-                return;
-            }
-
-            if (isNaN(args[0])) {
-
-                message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```");
-		    return;
-	        }
-
-            const fetched = await message.channel.fetchMessages({limit: args[0]});
-            console.log(fetched.size + " messages found, deleting...");
-
-            message.channel.bulkDelete(fetched)
-                .catch(error => message.channel.send(`Erreur: ${error}`));
-
-        }
-
-        purge();
-
-    }
-    
-    if (message.content === prefix + "aide"){
-        var embed2 = new Discord.RichEmbed()
-		.setThumbnail(bot.user.avatarURL)
-		.setTitle("AIDE")
-		.setDescription("COMMANDES")
-		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
-		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
-		.setColor("0xF4D14F")
-		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
-        message.channel.sendEmbed(embed2);
-    }
 
     if (message.content === prefix + "rigolo"){
         message.channel.sendMessage("TU ES MOCHE !");
@@ -188,6 +149,45 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
+	
+    if (msg.startsWith(prefix + 'SUPPR')) {
 
+        async function purge() {
+            message.delete();
+
+            if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+            }
+
+            if (isNaN(args[0])) {
+
+                message.channel.send("Merci d'utiliser un nombre !\n ```\n " + prefix + "suppr <nombre de messages à supprimer>\n```");
+		    return;
+	        }
+
+            const fetched = await message.channel.fetchMessages({limit: args[0]});
+            console.log(fetched.size + " messages found, deleting...");
+
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send(`Erreur: ${error}`));
+
+        }
+
+        purge();
+
+    }
+    
+    if (message.content === prefix + "aide"){
+        var embed2 = new Discord.RichEmbed()
+		.setThumbnail(bot.user.avatarURL)
+		.setTitle("AIDE")
+		.setDescription("COMMANDES")
+		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
+		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
+		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
+		.setColor("0xF4D14F")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
+        message.channel.sendEmbed(embed2);
+    }
 
 });
