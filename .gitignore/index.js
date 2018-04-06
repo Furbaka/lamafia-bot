@@ -20,7 +20,9 @@ bot.on('message', message => {
 	
 	
     if (message.content.startsWith(prefix + "sondage")) {
+	    
 	message.delete();
+	    
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ");
         var embed = new Discord.RichEmbed()
@@ -29,6 +31,7 @@ bot.on('message', message => {
 	    .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
             .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:", false)
             .setColor("0xB40404")
+	    .setFooter(message.author)
             .setTimestamp();
         message.channel.sendEmbed(embed)
         .then(function (message) {
