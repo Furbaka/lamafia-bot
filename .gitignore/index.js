@@ -159,7 +159,7 @@ bot.on('message', message => {
     if (message.content == prefix + "blague") {
     	var sayings = ["Un homme et un chien sont sur une barque le chien pète, l'homme tombe à l'eau et se noit. Quelle est la race du chien?\n**Un pékinois**",
 										"Tu as 2 poussin t'en veux 1 bas t'en **POUSSIN**",
-										"Qu'est ce qui est jaune est qui attend ?/n**Jonathan**",
+										"Qu'est ce qui est jaune est qui attend ?\n**Jonathan**",
 		       								"Quelle est la plus intelligente, la blonde, la rousse ou la brune ?/nLa rousse parce que c’est un dictionnaire.",
 										"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!e",
 		       								"Un monsieur visite un musée. Soudain il s'arrête et dit au guide :\n- Ah, c'est moche !\n- C'est du Picasso, répond le guide.\nPlus loin, il s'écrie de nouveau :\n- Ah, c'est vraiment moche !\n- Ca Monsieur, c'est un miroir !",
@@ -211,5 +211,19 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
     }
+    
+    
+    if (message.content === prefix + "news"){
+        var embed4 = new Discord.RichEmbed()
+		.setThumbnail(bot.user.avatarURL)
+		.setTitle("VOICI MES NOUVEAUTÉES !")
+		.setDescription("\n")
+		.addField("AJOUTS", "📌Ajout de la commande : `*sondage <question>` pour poser des question aux gens")
+		.addField("PATCH", "🌀 Des fois je spammais :/ 🌀")
+		.setColor("0xF4D14F")
+		.setFooter("Version 1.3")
+        message.channel.sendEmbed(embed4);
+    }	
+	
 
 });
