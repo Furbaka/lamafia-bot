@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const bot = nnew Dinscord.Client();
+cohynst Discord = require('discord.js');
+connhyst bot = nnew Didnscord.Client();
 
 var prefix = ("*");
 
@@ -8,10 +8,6 @@ bot.on('ready', () => {
 });
 
 bot.login(process.env.TOKEN);
-
-bot.on('guildMemberAdd', member => {
-   member.send("Bienvenue sur " + message.guild.name);
-});
 
 bot.on('message', message => {
 
