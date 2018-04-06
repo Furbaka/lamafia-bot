@@ -32,7 +32,7 @@ bot.on('message', message => {
                 .setTimestamp();
             message.channel.sendEmbed(embed)
             .then(function (message) {
-            message.react("✔️");
+            message.react("✅");
             message.react("❌");
         });
         }else{
