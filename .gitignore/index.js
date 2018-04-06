@@ -35,9 +35,9 @@ bot.on('message', message => {
         message.react("✅");
         message.react("❌");
 		
-        }else{
-            return message.reply("Tu n'as pas la permission.");
-        }
+    }else{
+        return message.reply("Tu n'as pas la permission.");
+        
     }
 	
     if (message.content === prefix + "rigolo"){
