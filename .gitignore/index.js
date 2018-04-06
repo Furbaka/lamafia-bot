@@ -88,7 +88,9 @@ bot.on('message', message => {
     }
     
     if (message.content.includes("HEURE") || message.content.includes("heure")) {
-        message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
+        if(!message.author.id == "429244907488542720"){
+	   message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
+	}
     }
     if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
         message.reply("T'as vu, c'est dingue !");
