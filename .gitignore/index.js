@@ -36,7 +36,7 @@ bot.on('message', message => {
             message.react("❌");
         });
         }else{
-            return message.reply("Tu n'as pas la persmission.");
+            return message.reply("Tu n'as pas la permission.");
         }
     }
 	
