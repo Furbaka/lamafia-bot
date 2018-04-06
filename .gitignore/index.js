@@ -1,5 +1,5 @@
-non const Discord = require('discord.js');
-non fvfdvconst bot =fvd new Discord.Client();
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 var prefix = ("*");
 
