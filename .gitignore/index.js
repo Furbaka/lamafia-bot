@@ -202,7 +202,7 @@ bot.on('message', message => {
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n")
+		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*news (pour voir mes nouveautées)\n*sondage <question> (pour faire un sondage)")
 		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
