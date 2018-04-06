@@ -29,7 +29,7 @@ bot.on('message', message => {
             .setTitle("SONDAGE")
 	    .setDescription("Question de "+ message.author)
 	    .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
-            .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:", false)
+            .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
             .setColor("0xB40404")
             .setTimestamp();
         message.channel.sendEmbed(embed)
