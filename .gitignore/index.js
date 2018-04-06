@@ -1,5 +1,5 @@
-cohynst Discord = require('discord.js');
-connhyst bot = nnew Didnscord.Client();
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 var prefix = ("*");
 
