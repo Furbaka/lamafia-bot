@@ -34,11 +34,9 @@ bot.on('message', message => {
         .then(function (message) {
         message.react("✅");
         message.react("❌");
-		
-    }else{
-        return message.reply("Tu n'as pas la permission.");
-        
-    }
+     });
+     }
+
 	
     if (message.content === prefix + "rigolo"){
         message.channel.sendMessage("TU ES MOCHE !");
