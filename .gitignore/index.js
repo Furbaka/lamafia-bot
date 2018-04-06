@@ -20,6 +20,7 @@ bot.on('message', message => {
 	
 	
     if (message.content.startsWith(prefix + "sondage")) {
+	message.delete();
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             let args = message.content.split(" ").slice(1);
             let thingToEcho = args.join(" ");
