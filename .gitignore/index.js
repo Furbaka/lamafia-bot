@@ -16,7 +16,31 @@ bot.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
 
-
+    
+	
+	
+    if (message.content.startsWith(prefix + "sondage")) {
+	    
+	message.delete()
+	 
+        if(message.member.hasPermission("MANAGE_MESSAGES")){
+            let args = message.content.split(" ").slice(1);
+            let thingToEcho = args.join(" ");
+            var embed = new Discord.RichEmbed()
+                .setDescription("Sondage")
+                .addField(thingToEcho + " ", "Répondre avec white_check_mark ou x", false)
+                .setColor("0xB40404")
+                .setTimestamp();
+            message.channel.sendEmbed(embed)
+            .then(function (message) {
+            message.react("?");
+            message.react("?");
+        });
+        }else{
+            return message.reply("Tu n'as pas la persmission.");
+        }
+    }
+	
     if (message.content === prefix + "rigolo"){
         message.channel.sendMessage("TU ES MOCHE !");
         console.log("Commande effectué");
