@@ -21,21 +21,20 @@ bot.on('message', message => {
 	
     if (message.content.startsWith(prefix + "sondage")) {
 	message.delete();
-        if(message.member.hasPermission("MANAGE_MESSAGES")){
-            let args = message.content.split(" ").slice(1);
-            let thingToEcho = args.join(" ");
-            var embed = new Discord.RichEmbed()
-                .setTitle("SONDAGE")
-	        .setDescription("\n")
-	        .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
-                .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:", false)
-                .setColor("0xB40404")
-                .setTimestamp();
-            message.channel.sendEmbed(embed)
-            .then(function (message) {
-            message.react("✅");
-            message.react("❌");
-        });
+        let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ");
+        var embed = new Discord.RichEmbed()
+            .setTitle("SONDAGE")
+	    .setDescription("\n")
+	    .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
+            .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:", false)
+            .setColor("0xB40404")
+            .setTimestamp();
+        message.channel.sendEmbed(embed)
+        .then(function (message) {
+        message.react("✅");
+        message.react("❌");
+		
         }else{
             return message.reply("Tu n'as pas la permission.");
         }
