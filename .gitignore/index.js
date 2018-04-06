@@ -26,8 +26,8 @@ bot.on('message', message => {
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ");
         var embed = new Discord.RichEmbed()
-            .setTitle("SONDAGE de" + message.author)
-	    .setDescription("\n")
+            .setTitle("SONDAGE")
+	    .setDescription("Question de "+ message.author)
 	    .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
             .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:", false)
             .setColor("0xB40404")
