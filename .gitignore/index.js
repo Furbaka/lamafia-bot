@@ -235,12 +235,12 @@ bot.on('message', message => {
             .setTitle("RECHERCHE DE JOUEURS")
 	    .setDescription("Recherche par "+ message.author)
 	    .setThumbnail("https://images.emojiterra.com/emojione/v2/128px/1f579.png")
-            .addField("Joue à " + thingToEcho + " ", "Réagissez avec :joystick: si vous êtes intéressé(e)", false)
+            .addField("Joue à " + thingToEcho + " ", "Réagissez avec 🕹️ si vous êtes intéressé(e)", false)
             .setColor("0xB40404")
             .setTimestamp();
         message.channel.sendEmbed(embed)
         .then(function (message) {
-        message.react(":joystick:");
+        message.react("🕹️");
      });
      }
 	
