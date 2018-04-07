@@ -10,7 +10,9 @@ bot.on('ready', () => {
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
-
+	
+    if(message.author.bot) return;
+	
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
@@ -70,9 +72,7 @@ bot.on('message', message => {
     }
     
     if (message.content.includes("WAE") || message.content.includes("wae")){
-	if(!message.author.id == "429244907488542720"){
-           message.channel.sendMessage("Follow me ma brudda, I know da way !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
-	}
+           message.channel.sendMessage("Follow me ma brudda, I know da wae !\n https://www.google.com/maps/place/Uganda/@1.3671051,30.058145,7z/data=!3m1!4b1!4m5!3m4!1s0x1771a69f6499f945:0x874155ce43014549!8m2!3d1.373333!4d32.290275");
     }
 
     if (message.content.includes("PATES") || message.content.includes("BURGER") || message.content.includes("PIZZA") || message.content.includes("PÂTES") || message.content.includes("pates") || message.content.includes("burger") || message.content.includes("pizza") || message.content.includes("pâtes")) {
@@ -88,9 +88,7 @@ bot.on('message', message => {
     }
     
     if (message.content.includes("HEURE") || message.content.includes("heure")) {
-        if(!message.author.id == "429244907488542720"){
 	   message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
-	}
     }
     if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
         message.reply("T'as vu, c'est dingue !");
