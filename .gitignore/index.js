@@ -224,5 +224,24 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed4);
     }	
 	
-
+	
+    if (message.content.startsWith(prefix + "multiplayer")) {
+	    
+	message.delete();
+	    
+        let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ");
+        var embed = new Discord.RichEmbed()
+            .setTitle("RECHERCHE DE JOUEURS")
+	    .setDescription("Recherche par "+ message.author)
+	    .setThumbnail("https://images.emojiterra.com/emojione/v2/128px/1f579.png")
+            .addField("Joue à " + thingToEcho + " ", "Réagissez avec :joystick: si vous êtes intéressé(e)", false)
+            .setColor("0xB40404")
+            .setTimestamp();
+        message.channel.sendEmbed(embed)
+        .then(function (message) {
+        message.react("🕹️");
+     });
+     }
+	
 });
