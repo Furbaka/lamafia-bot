@@ -203,10 +203,10 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
-		.addField("FUN", "*rigolo | *troprigolo | *creepy | *blague")
-		.addField("UTILES", "*info (pour voir les informations du serveurs)\n*invite (pour inviter le bot sur votre serv)\n*avatar (pour avoir votre PP)\n*aide (bah... pour l'aide quoi.)\n*news (pour voir mes nouveautées)\n*sondage <question> (pour faire un sondage)")
-		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
-		.addField("JEUX", "*multi <NOM DU JEU AUQUEL VOUS JOUEZ> (Pour faire une recherche de joueurs)")
+		.addField("FUN", "`*rigolo` | `*troprigolo` | `*creepy` | `*blague`")
+		.addField("UTILES", "`*info` (pour voir les informations du serveurs)\n`*invite` (pour inviter le bot sur votre serv)\n`*avatar` (pour avoir votre PP)\n`*aide` (bah... pour l'aide quoi.)\n`*news` (pour voir mes nouveautées)\n`*sondage <question>` (pour faire un sondage)")
+		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)`
+		.addField("JEUX", "\`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
@@ -218,7 +218,7 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("VOICI MES NOUVEAUTÉES !")
 		.setDescription("\n")
-		.addField("AJOUTS", "📌Ajout de la commande : `*multi <NOM DU JEU AUQUEL VOUS JOUEZ> (Pour faire une recherche de joueurs)")
+		.addField("AJOUTS", "📌Ajout de la commande : \`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
 		.addField("PATCH", "🌀 Des fois je spammais (encore) :/ 🌀")
 		.setColor("0xF4D14F")
 		.setFooter("Version 1.3")
@@ -226,7 +226,7 @@ bot.on('message', message => {
     }	
 	
 	
-    if (message.content.startsWith(prefix + "multi")) {
+    if (msg.startsWith(prefix + "MULTI")) {
 	    
 	message.delete();
 	    
