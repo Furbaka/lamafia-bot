@@ -218,8 +218,8 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("VOICI MES NOUVEAUTÉES !")
 		.setDescription("\n")
-		.addField("AJOUTS", "📌Ajout de la commande : `*sondage <question>` pour poser des question aux gens")
-		.addField("PATCH", "🌀 Des fois je spammais :/ 🌀")
+		.addField("AJOUTS", "📌Ajout de la commande : `*multi <NOM DU JEU AUQUEL VOUS JOUEZ> (Pour faire une recherche de joueurs)")
+		.addField("PATCH", "🌀 Des fois je spammais (encore) :/ 🌀")
 		.setColor("0xF4D14F")
 		.setFooter("Version 1.3")
         message.channel.sendEmbed(embed4);
