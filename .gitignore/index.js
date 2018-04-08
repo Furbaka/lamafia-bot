@@ -259,4 +259,4 @@ bot.on('message', message => {
                     message.channel.sendFile(file.file)
 	      })
       }
-)};
+});
