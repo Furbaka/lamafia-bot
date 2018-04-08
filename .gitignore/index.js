@@ -258,4 +258,8 @@ bot.on('message', message => {
                     message.channel.sendFile(body)
 	      })
       }
+	    if (message.content === prefix + "cat"){
+		    message.channel.sendFile("http://thecatapi.com/api/images/get")
+
+	    }
 });
