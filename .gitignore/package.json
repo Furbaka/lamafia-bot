@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": ""LightLife"",
   "main": "index.js",
-    "test": "echo "Error: no test specified" && exit 1"
-  },
   "author": "Mistigrix",
   "license": "ISC",
   "dependencies": {
