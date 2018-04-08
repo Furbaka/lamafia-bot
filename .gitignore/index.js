@@ -246,7 +246,7 @@ bot.on('message', message => {
      });
      }
 
-     if (msg.startsWith(prefix + "chat")) {
+     if (message.content === prefix + "chat") {
               message.delete()
 
               var options = {
