@@ -251,15 +251,13 @@ bot.on('message', message => {
 
               var options = {
                 method: "GET",
-                url: "http://thecatapi.com/api/images/get",
+                url: `http://aws.random.cat/meow`,
               }
               
               request.get(options, (error, response, body) => {
-                    message.channel.sendFile(file.file)
-	      })
-      }
-	    if (message.content === prefix + "cat"){
-		    message.channel.sendFile("http://thecatapi.com/api/images/get")
+                    var file = JSON.parse(body)
+                    message.channel.sendFiles(file.file)
+              })
 
 	    }
 });
