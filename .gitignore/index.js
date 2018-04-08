@@ -246,7 +246,7 @@ bot.on('message', message => {
      });
      }
 
-     if (message.content === prefix + "chat") {
+     if (msg.startsWith(prefix + "CHAT")) {
               message.delete()
 
               var options = {
@@ -254,7 +254,7 @@ bot.on('message', message => {
                 url: `http://aws.random.cat/meow`,
               }
               
-              request(options, (error, response, body) => {
+              request.get(options, (error, response, body) => {
                     var file = JSON.parse(body)
                     message.channel.sendMessage(body)
 	      })
