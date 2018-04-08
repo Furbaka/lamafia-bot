@@ -247,7 +247,7 @@ bot.on('message', message => {
      }
 
      if (msg.startsWith(prefix + "CHAT")) {
-              message.delete()
+              message.delete();
 
               var options = {
                 method: "GET",
@@ -255,8 +255,8 @@ bot.on('message', message => {
               }
               
               request.get(options, (error, response, body) => {
-                    var file = JSON.parse(body)
-                    message.channel.sendFiles(file.file)
-              })
+                    var file = JSON.parse(body);
+                    message.channel.sendFiles(file.file);
+              });
      }
 });
