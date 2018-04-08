@@ -254,9 +254,9 @@ bot.on('message', message => {
                 url: `http://aws.random.cat/meow`,
               }
               
-              request.get(options, (error, response, body) => {
+              request(options, (error, response, body) => {
                     var file = JSON.parse(body)
-                    message.channel.sendFile(file.file)
+                    message.channel.sendMessage(file.file)
 	      })
       }
 });
