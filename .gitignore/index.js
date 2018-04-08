@@ -255,10 +255,8 @@ bot.on('message', message => {
                    url: cat,
                     json: true
                 }, function (error, response, body) {
-                   msg.delete()
-                   message.channel.send(body)})
-                })
-	     
-      }
-	
+                   var cat = JSON.parse(body)
+                   message.delete()
+                   message.channel.sendFile(cat.file)})
+})
 });
