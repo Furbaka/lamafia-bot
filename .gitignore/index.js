@@ -257,7 +257,6 @@ bot.on('message', message => {
             }, function (error, response, body) {
                 msg.delete()
                 message.channel.send(body)})
-            })
 
 	}
 });
