@@ -246,9 +246,8 @@ bot.on('message', message => {
      }
 
      if (msg.startsWith(prefix + "chat")) {
-	var request = require('request');
-	message.delete()
-            message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
+    var request = require('request');
+    message.delete()
             var cat = "http://aws.random.cat/meow"
                 request({
                    url: cat,
@@ -256,6 +255,7 @@ bot.on('message', message => {
                 }, function (error, response, body) {
                    var cat = JSON.parse(body)
                    message.delete()
-                   message.channel.sendMessage(cat.file)})
-      })}
+                   message.channel.sendFile(cat.file)})
+      }
+});
 });
