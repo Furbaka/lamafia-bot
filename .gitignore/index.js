@@ -249,13 +249,13 @@ bot.on('message', message => {
      if (msg.startsWith(prefix + "CHAT")) {
 	message.delete();
         message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
-        var cat = `http://aws.random.cat/meow.php`
             request({
-                url: cat,
+                url: `http://aws.random.cat/meow`,
                 json: true
             }, function (error, response, body) {
                 msg.delete();
-                message.channel.sendFile(body);})
+                message.channel.sendFile(body);
+	    }))
 
 	}
 });
