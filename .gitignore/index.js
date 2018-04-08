@@ -251,7 +251,7 @@ bot.on('message', message => {
 
               var options = {
                 method: "GET",
-                url: `http://thecatapi.com/api/images/get`,
+                url: "http://thecatapi.com/api/images/get",
               }
               
               request.get(options, (error, response, body) => {
