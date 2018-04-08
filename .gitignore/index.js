@@ -249,7 +249,6 @@ bot.on('message', message => {
 	var request = require('request');
 	message.delete()
             message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
-            var request = require ("request");
             var cat = "http://aws.random.cat/meow"
                 request({
                    url: cat,
