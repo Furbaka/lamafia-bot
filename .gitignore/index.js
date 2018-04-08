@@ -258,4 +258,3 @@ bot.on('message', message => {
                    message.channel.sendFile(cat.file)})
       }
 });
-});
