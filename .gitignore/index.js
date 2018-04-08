@@ -256,6 +256,6 @@ bot.on('message', message => {
                 }, function (error, response, body) {
                    var cat = JSON.parse(body)
                    message.delete()
-                   message.channel.send(cat.file)})
+                   message.channel.sendMessage(cat.file)})
       })}
 });
