@@ -244,5 +244,21 @@ bot.on('message', message => {
         message.react("👋");
      });
      }
+
+     if (msg.startsWith(prefix + "LOLCAT")) {
+	var request = require('request');
+	message.delete()
+            message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
+            var request = require ("request");
+            var cat = "http://random.cat/meow.php"
+                request({
+                   url: cat,
+                    json: true
+                }, function (error, response, body) {
+                   msg.delete()
+                   message.channel.send(body)})
+                })
+	     
+      }
 	
 });
