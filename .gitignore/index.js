@@ -251,7 +251,7 @@ bot.on('message', message => {
 
               var options = {
                 method: "GET",
-                url: `http://aws.random.cat/meow`,
+                url: `http://thecatapi.com/api/images/get?format=src&results_per_page=1`,
               }
               
               request.get(options, (error, response, body) => {
