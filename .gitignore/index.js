@@ -249,14 +249,14 @@ bot.on('message', message => {
      if (msg.startsWith(prefix + "CHAT")) {
 	var request = require('request');
 	message.delete()
-        message.channel.sendFile("Veuillez patientez, je recherche un chat...").then((msg)=>{
+        message.channel.sendMessage("Veuillez patientez, je recherche un chat...").then((msg)=>{
         var cat = `http://aws.random.cat/meow.php`
             request({
                 url: cat,
                 json: true
             }, function (error, response, body) {
                 msg.delete()
-                message.channel.send(body)})
+                message.channel.sendFile(body)})
 
 	}
 });
