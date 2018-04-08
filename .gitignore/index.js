@@ -257,7 +257,6 @@ bot.on('message', message => {
               request.get(options, (error, response, body) => {
                     var file = JSON.parse(body)
                     message.channel.sendFiles(file.file)
-              }
 }
 
 });
