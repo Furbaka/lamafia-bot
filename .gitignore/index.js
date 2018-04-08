@@ -255,7 +255,7 @@ bot.on('message', message => {
               }
               
               request.get(options, (error, response, body) => {
-                    message.channel.sendFile(body)
+                    message.channel.sendFile(file.file)
 	      })
       }
 	    if (message.content === prefix + "cat"){
