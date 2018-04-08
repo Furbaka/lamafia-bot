@@ -246,15 +246,17 @@ bot.on('message', message => {
      }
 
      if (msg.startsWith(prefix + "chat")) {
-    var request = require('request');
-    message.delete()
-            var cat = "http://aws.random.cat/meow"
-                request({
-                   url: cat,
-                    json: true
-                }, function (error, response, body) {
-                   var cat = JSON.parse(body)
-                   message.delete()
-                   message.channel.sendFile(cat.file)})
-      }
+              message.delete()
+
+              var options = {
+                method: "GET",
+                url: `http://aws.random.cat/meow`,
+              }
+              
+              request.get(options, (error, response, body) => {
+                    var file = JSON.parse(body)
+                    message.channel.sendFiles(file.file)
+              }
+}
+
 });
