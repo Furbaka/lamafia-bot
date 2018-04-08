@@ -258,5 +258,4 @@ bot.on('message', message => {
                    var cat = JSON.parse(body)
                    message.delete()
                    message.channel.sendFile(cat.file)})
-})
 });
