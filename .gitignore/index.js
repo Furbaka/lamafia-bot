@@ -247,15 +247,16 @@ bot.on('message', message => {
      }
 
      if (msg.startsWith(prefix + "CHAT")) {
-	message.delete();
-        message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
-            request({
-                url: `http://aws.random.cat/meow`,
-                json: true
-            }, function (error, response, body) {
-                msg.delete();
-                message.channel.sendFile(body);
-	    }))
+              message.delete()
 
-	}
+              var options = {
+                method: "GET",
+                url: `http://aws.random.cat/meow`,
+              }
+              
+              request.get(options, (error, response, body) => {
+                    var file = JSON.parse(body)
+                    message.channel.sendFiles(file.file)
+              })
+     }
 });
