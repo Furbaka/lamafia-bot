@@ -249,8 +249,8 @@ bot.on('message', message => {
      if (msg.startsWith(prefix + "CHAT")) {
 	var request = require('request');
 	message.delete()
-        message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
-        var cat = "http://AWS;random.cat/meow.php"
+        message.channel.sendFile("Veuillez patientez, je recherche un chat...").then((msg)=>{
+        var cat = "http://aws.random.cat/meow.php"
             request({
                 url: cat,
                 json: true
