@@ -245,7 +245,7 @@ bot.on('message', message => {
      });
      }
 
-     if (msg.startsWith(prefix + "LOLCAT")) {
+     if (msg.startsWith(prefix + "chat")) {
 	var request = require('request');
 	message.delete()
             message.channel.send("Veuillez patientez, je recherche un chat...").then((msg)=>{
