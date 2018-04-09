@@ -81,7 +81,7 @@ bot.on('message', message => {
     }
     
     if (message.content.includes("DAB") || message.content.includes("dab")){
-        message.channel.sendMessage("<:dab:432913724269920256> LE DAB NÉ PAS MORT <:dab:432913724269920256>");
+        message.channel.sendMessage(":phatdab: LE DAB NÉ PAS MORT <:dab:432913724269920256>");
     }
 
     if (message.content == "BOT" || message.content == "bot"){
