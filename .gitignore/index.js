@@ -246,17 +246,26 @@ bot.on('message', message => {
      });
      }
 
-     if (msg.startsWith(prefix + "CHAT")) {
-              message.delete();
+   //  if (msg.startsWith(prefix + "CHAT")) {
+              //message.delete();
 
-              var options = {
-                method: "GET",
-                url: `http://aws.random.cat/meow`,
-              };
-              
-              request.get(options, (error, response, body) => {
-                    var file = JSON.parse(body);
-                    message.channel.sendFile(file.file);
-              });
-     }
+              //var options = {
+                //method: "GET",
+                //url: `http://aws.random.cat/meow`,
+              //};
+            //  
+          //    request.get(options, (error, response, body) => {
+        //            var file = JSON.parse(body);
+          //          message.channel.sendFile(file.file);
+      //        });
+    // }
+	if (msg.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
+	
+		if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                	return;	
+		}
+		.then(function (message) {
+        	message.react("<:1rahh:432969566772264960>");
+		}
+	}
 });
