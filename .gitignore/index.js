@@ -264,4 +264,10 @@ bot.on('message', message => {
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
         	message.react(nop.id);
 	}
+	
+	if (message.content === 'testedit') {
+        message.reply('testing emoji edit').then(msg => {
+            msg.react('😀').then((msgreaction) => msgreaction.message.edit('test test test'));
+        })
+    	}
 });
