@@ -251,8 +251,8 @@ bot.on('message', message => {
 
               var options = {
                 method: "GET",
-                url: `http://aws.random.cat/meow`,
-              }
+                url: `http://aws.random.cat/meow.php`,
+              };
               
               request.get(options, (error, response, body) => {
                     var file = JSON.parse(body);
