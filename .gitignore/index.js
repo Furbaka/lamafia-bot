@@ -261,12 +261,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react(":poop:");
+        	message.react('<:1rahh:432969566772264960>');
 	}
-	
-	if (message.content === 'testedit') {
-        message.reply('testing emoji edit').then(msg => {
-            msg.react('😀').then((msgreaction) => msgreaction.message.edit('test test test'));
-        })
-    	}
 });
