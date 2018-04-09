@@ -259,7 +259,7 @@ bot.on('message', message => {
           //          message.channel.sendFile(file.file);
       //        });
     // }
-	if (msg.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
+	if (message.content.includes.toUpperCase("TG") || message.content.includes.toUpperCase("FTG") || message.content.includes.toUpperCase("NTM") || message.content.includes.toUpperCase("FDP")){
 	
 		if (!message.member.hasPermission("MANAGE_MESSAGES")) {
                 	return;	
