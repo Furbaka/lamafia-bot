@@ -260,10 +260,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes.toUpperCase("TG") || message.content.includes.toUpperCase("FTG") || message.content.includes.toUpperCase("NTM") || message.content.includes.toUpperCase("FDP")){
-	
-		if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-                	return;	
-		}
         	message.react("<:1rahh:432969566772264960>");
 	}
 });
