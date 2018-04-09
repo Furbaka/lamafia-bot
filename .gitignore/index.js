@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
+const nop = client.emojis.get("432969566772264960");
 
 var prefix = ("*");
 
@@ -18,6 +19,7 @@ bot.on('message', message => {
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
+	
 
     
 	
@@ -260,6 +262,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react("<:1rahh:432969566772264960>");
+        	message.react(nop.id);
 	}
 });
