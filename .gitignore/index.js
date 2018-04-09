@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-const raa = client.emojis.get("432969566772264960")
+const raa = bot.emojis.get("432969566772264960")
 
 var prefix = ("*");
 
