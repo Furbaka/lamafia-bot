@@ -261,6 +261,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react('<:1rahh:432969566772264960>');
+        	message.react('432969566772264960');
 	}
 });
