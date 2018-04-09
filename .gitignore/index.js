@@ -264,8 +264,6 @@ bot.on('message', message => {
 		if (!message.member.hasPermission("MANAGE_MESSAGES")) {
                 	return;	
 		}
-		.then(function (message) {
         	message.react("<:1rahh:432969566772264960>");
-		}
 	}
 });
