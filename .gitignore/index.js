@@ -201,7 +201,7 @@ bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
-		.setThumbnail(bot.user.avatarURL)
+		.setThumbnail("https://discordemoji.com/assets/emoji/BulbaHein.png")
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "`*rigolo` | `*troprigolo` | `*creepy` | `*blague`")
