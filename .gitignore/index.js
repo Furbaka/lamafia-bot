@@ -268,6 +268,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react(bot.emojis.get("417041946062749716"));
+        	message.react(bot.emojis.get("432969566772264960"));
 	}
 });
