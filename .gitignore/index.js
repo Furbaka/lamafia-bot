@@ -8,6 +8,12 @@ bot.on('ready', () => {
 	bot.user.setGame(`${bot.guilds.size} serveurs | *aide`);
 });
 
+
+//EMOJIS
+const knuckles = message.react(bot.emojis.get("432968588383748116"));
+const lolidragon = message.react(bot.emojis.get("433289550375419904"));
+const dab = message.react(bot.emojis.get("432915228947120129"));
+
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
@@ -74,12 +80,12 @@ bot.on('message', message => {
     }
     
     if (message.content.includes(" WAE") || message.content.includes(" wae")){
-           var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE !" + bot.emojis.get("432968588383748116"),
-										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !",
-										"DO YOU KNOW DA WAE !",
-		       								"WER IS DA WAE ?" ,
-										"WER IS DA QUEEN ?",
-		       								"THERE IS DA QUEEN !"];
+           var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE !\n ${knuckles}${knuckles}${knuckles}",
+										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n ${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}",
+										"DO YOU KNOW DA WAE ! ${knuckles}",
+		       								"WER IS DA WAE ? ${knuckles}" ,
+										"WER IS DA QUEEN ? ${knuckles}",
+		       								"THERE IS DA QUEEN !\n${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}${lolidragon}"];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result], true);
     }
@@ -89,7 +95,7 @@ bot.on('message', message => {
     }
     
     if (message.content.includes(" DAB") || message.content.includes(" dab")){
-        message.channel.sendMessage("<:dab:432913724269920256> LE DAB NÉ PAS MORT <:dab:432913724269920256>");
+        message.channel.sendMessage("${dab} LE DAB NÉ PAS MORT ${dab}");
     }
 
     if (message.content == "BOT" || message.content == "bot"){
