@@ -10,9 +10,9 @@ bot.on('ready', () => {
 
 
 //EMOJIS
-const knuckles = message.react(bot.emojis.get("432968588383748116"));
-const lolidragon = message.react(bot.emojis.get("433289550375419904"));
-const dab = message.react(bot.emojis.get("432915228947120129"));
+const knuckles = bot.emojis.get("432968588383748116");
+const lolidragon = bot.emojis.get("433289550375419904");
+const dab = bot.emojis.get("432915228947120129");
 
 bot.login(process.env.TOKEN);
 
