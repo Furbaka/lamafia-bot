@@ -76,16 +76,10 @@ bot.on('message', message => {
     if (message.content.includes("WAE") || message.content.includes("wae")){
            var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE ! <:little_red_shit:432968946812190720>",
 										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n<:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720>",
-										"Ce n'était pas à cause du virus que les gens ont commencé à s'entre-dévorer. C'était à cause du goût.",
-		       								"Elle a le coeur sur la main, mais sa cervelle est répandue sur les murs.",
-										"<<Ton ami imaginaire n'est pas réel.>> Quand tu l'as accepté, j'ai commencé à disparaître",
-		       								"Avis à la femme qui n'arrête pas de frapper à ma porte la nuit : Je ne te laisserai pas sortir.",
-										"Mes étudiants m'aiment de tout leur cœur. J'aimerais juste qu'ils ne laissent pas de trace.",
-		       								"<<Maman ! Maman ! Ma poupée parle !>> <<Je sais, ma chérie.>> La voix de Maman venait de la poupée.",
-										"Quelques heures après avoir été enterré vivant, j'ai été soulagé en entendant quelqu'un creuser. Ma joie est vite retombée quand j'ai réalisé que le son venait d'en dessous.",
-										"Remettez les miroirs. Vous regarder nous manque.",
-										"La nuit dernière, j'ai été réveillé par les pleurs d'un enfant. J'ai descendu les escaliers et j'ai fourré un bâillon dans sa bouche.",
-										"Saviez-vous que vous connaissez tous les visages rencontrés durant vos rêves et qu'il est impossible d'en inventer ? Rappelez-vous des créatures et démons de vos cauchemars."];
+										"DO YOU KNOW DA WAE ! <:little_red_shit:432968946812190720>",
+		       								"WER IS DA WAE ? <:little_red_shit:432968946812190720>",
+										"WER IS DA QUEEN ? <:little_red_shit:432968946812190720>",
+		       								"THERE IS DA QUEEN !\n<:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:lolidragon:433289847772413982> "];
 
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
@@ -275,6 +269,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react("<:little_red_shit:432968946812190720>");
+        	message.react('<:little_red_shit:432968946812190720>');
 	}
 });
