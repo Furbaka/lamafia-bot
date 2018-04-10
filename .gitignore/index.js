@@ -98,9 +98,17 @@ bot.on('message', message => {
     }
     
     if (message.content.includes(" DAB") || message.content.includes(" dab")){
-        message.channel.sendMessage("${dab} LE DAB NÉ PAS MORT ${dab}");
+	var knuckles = bot.emojis.get("432968588383748116");
+	var lolidragon = bot.emojis.get("433289550375419904");
+	var dab = bot.emojis.get("432915228947120129");
+	var parrot = bot.emojis.get("432970357536718858.")
+           var sayings = [`LE ${dab} NÉ PA MOR !`,
+										`J'EFFECTUE LE ${dab} !`,
+										`J'APPRÉCIE DABBER ${dab} !`,
+		       								`JE FAIS UN ${dab} DU NEZ !`];
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			message.channel.sendMessage(sayings[result], true);
     }
-
     if (message.content == "BOT" || message.content == "bot"){
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
@@ -277,6 +285,8 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react(bot.emojis.get("433316429044121601"));
+        	if (message.channel.nsfw === false) {
+		message.react(bot.emojis.get("433316429044121601"));
+	}
 	}
 });
