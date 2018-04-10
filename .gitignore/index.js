@@ -74,12 +74,12 @@ bot.on('message', message => {
     }
     
     if (message.content.includes(" WAE") || message.content.includes(" wae")){
-           var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE ! <:little_red_shit:432968588383748116>",
-										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !",
-										"DO YOU KNOW DA WAE !",
-		       								"WER IS DA WAE ?",
-										"WER IS DA QUEEN ?",
-		       								"THERE IS DA QUEEN !"];
+           var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE !" + bot.emojis.get("432968588383748116"),
+										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n"+ bot.emojis.get("432968588383748116") + bot.emojis.get("432968588383748116") + bot.emojis.get("432968588383748116") + bot.emojis.get("432968588383748116") + bot.emojis.get("432968588383748116") ,
+										"DO YOU KNOW DA WAE !" + bot.emojis.get("432968588383748116"),
+		       								"WER IS DA WAE ?" + bot.emojis.get("432968588383748116"),
+										"WER IS DA QUEEN ?" + bot.emojis.get("432968588383748116"),
+		       								"THERE IS DA QUEEN !" + bot.emojis.get("432968588383748116")];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result], true);
     }
@@ -268,6 +268,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react(bot.emojis.get("433289550375419904"));
+        	message.react(bot.emojis.get("417041946062749716"));
 	}
 });
