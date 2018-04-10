@@ -74,12 +74,12 @@ bot.on('message', message => {
     }
     
     if (message.content.includes("WAE") || message.content.includes("wae")){
-           var sayings = ['FOLLOW ME MA BRUDDAH I KNOW DA WAE ! <:little_red_shit:432968946812190720>',
-										'COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n<:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720>',
-										'DO YOU KNOW DA WAE ! <:little_red_shit:432968946812190720>',
-		       								'WER IS DA WAE ? <:little_red_shit:432968946812190720>',
-										'WER IS DA QUEEN ? <:little_red_shit:432968946812190720>',
-		       								'THERE IS DA QUEEN !\n<:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:little_red_shit:432968946812190720><:lolidragon:433289847772413982>'];
+           var sayings = ['FOLLOW ME MA BRUDDAH I KNOW DA WAE ! <:little_red_shit:432968588383748116>',
+										'COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n<:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116>',
+										'DO YOU KNOW DA WAE ! <:little_red_shit:432968588383748116>',
+		       								'WER IS DA WAE ? <:little_red_shit:432968588383748116>',
+										'WER IS DA QUEEN ? <:little_red_shit:432968588383748116> <:lolidragon:433289550375419904>',
+		       								'THERE IS DA QUEEN !\n<:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:lolidragon:433289550375419904>'];
 
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
@@ -269,6 +269,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react('<:little_red_shit:432968946812190720>');
+        	message.react('<:1rahh:417041946062749716>');
 	}
 });
