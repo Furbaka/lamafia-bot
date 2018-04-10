@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-const raa = bot.emojis.get("432969566772264960")
 
 var prefix = ("*");
 
@@ -262,6 +261,6 @@ bot.on('message', message => {
       //        });
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
-        	message.react(raa.id);
+        	message.react("<:little_red_shit:432968946812190720>");
 	}
 });
