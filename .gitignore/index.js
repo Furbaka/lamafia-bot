@@ -81,7 +81,7 @@ bot.on('message', message => {
 										"WER IS DA QUEEN ? <:little_red_shit:432968588383748116> <:lolidragon:433289550375419904>",
 		       								"THERE IS DA QUEEN !\n<:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:lolidragon:433289550375419904>"];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayings[result]);
+			message.channel.sendMessage(sayings[result], true);
     }
 
     if (message.content.includes("PATES") || message.content.includes("BURGER") || message.content.includes("PIZZA") || message.content.includes("PÂTES") || message.content.includes("pates") || message.content.includes("burger") || message.content.includes("pizza") || message.content.includes("pâtes")) {
