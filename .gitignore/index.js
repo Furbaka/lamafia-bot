@@ -227,7 +227,7 @@ bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
-		.setThumbnail("https://ncache.ilbe.com/files/attach/new/20130329/720092515/552068782/1001874344/4afd60497d899fde5843264c9471854e.gif")
+		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
 		.addField("FUN", "`*rigolo` | `*troprigolo` | `*creepy` | `*blague`")
@@ -242,7 +242,7 @@ bot.on('message', message => {
     
     if (message.content === prefix + "news"){
         var embed4 = new Discord.RichEmbed()
-		.setThumbnail("https://ncache.ilbe.com/files/attach/new/20130329/720092515/552068782/1001874344/4afd60497d899fde5843264c9471854e.gif")
+		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
 		.setTitle("VOICI MES NOUVEAUTÉES !")
 		.setDescription("\n")
 		.addField("AJOUTS", "📌Ajout de la commande : \`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
