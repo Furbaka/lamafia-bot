@@ -6,6 +6,7 @@ var prefix = ("*");
 
 bot.on('ready', () => {
 	bot.user.setGame(`${bot.guilds.size} serveurs | *aide`);
+	Discord.Client.setUsername("⚡Rainbow+")
 });
 
 
