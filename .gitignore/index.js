@@ -10,9 +10,9 @@ bot.on('ready', () => {
 
 
 //EMOJIS
-const knuckles = ("bot.emojis.get(\"432968588383748116\")");
-const lolidragon = ("bot.emojis.get(\"433289550375419904\")");
-const dab = ("bot.emojis.get(\"432915228947120129\")");
+const knuckles = bot.emojis.get("432968588383748116");
+const lolidragon = bot.emojis.get("433289550375419904");
+const dab = bot.emojis.get("432915228947120129");
 
 bot.login(process.env.TOKEN);
 
@@ -80,6 +80,9 @@ bot.on('message', message => {
     }
     
     if (message.content.includes(" WAE") || message.content.includes(" wae")){
+	var knuckles = bot.emojis.get("432968588383748116");
+	var lolidragon = bot.emojis.get("433289550375419904");
+	var dab = bot.emojis.get("432915228947120129");
            var sayings = [`FOLLOW ME MA BRUDDAH I KNOW DA WAE !\n ${knuckles}${knuckles}${knuckles}`,
 										`COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n ${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}${knuckles}`,
 										`DO YOU KNOW DA WAE ! ${knuckles}`,
