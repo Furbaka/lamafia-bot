@@ -73,22 +73,22 @@ bot.on('message', message => {
         console.log("Commande effectué");
     }
     
-    if (message.content.includes("WAE") || message.content.includes("wae")){
+    if (message.content.includes(" WAE") || message.content.includes(" wae")){
            var sayings = ["FOLLOW ME MA BRUDDAH I KNOW DA WAE ! <:little_red_shit:432968588383748116>",
-										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !\n<:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116>",
-										"DO YOU KNOW DA WAE ! <:little_red_shit:432968588383748116>",
-		       								"WER IS DA WAE ? <:little_red_shit:432968588383748116>",
-										"WER IS DA QUEEN ? <:little_red_shit:432968588383748116> <:lolidragon:433289550375419904>",
-		       								"THERE IS DA QUEEN !\n<:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:little_red_shit:432968588383748116><:lolidragon:433289550375419904>"];
+										"COME ON MY BRUDAH WE WILL MAKE AN ARMY !",
+										"DO YOU KNOW DA WAE !",
+		       								"WER IS DA WAE ?",
+										"WER IS DA QUEEN ?",
+		       								"THERE IS DA QUEEN !"];
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result], true);
     }
 
-    if (message.content.includes("PATES") || message.content.includes("BURGER") || message.content.includes("PIZZA") || message.content.includes("PÂTES") || message.content.includes("pates") || message.content.includes("burger") || message.content.includes("pizza") || message.content.includes("pâtes")) {
+    if (message.content.includes(" PATES") || message.content.includes(" BURGER") || message.content.includes(" PIZZA") || message.content.includes(" PÂTES") || message.content.includes(" pates") || message.content.includes(" burger") || message.content.includes(" pizza") || message.content.includes(" pâtes")) {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes("DAB") || message.content.includes("dab")){
+    if (message.content.includes(" DAB") || message.content.includes(" dab")){
         message.channel.sendMessage("<:dab:432913724269920256> LE DAB NÉ PAS MORT <:dab:432913724269920256>");
     }
 
@@ -96,7 +96,7 @@ bot.on('message', message => {
         message.channel.sendMessage("Donc... je suis pas un vrai petit garcon ? :/");
     }
     
-    if (message.content.includes("HEURE") || message.content.includes("heure")) {
+    if (message.content.includes(" HEURE") || message.content.includes(" heure")) {
 	   message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
     if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
