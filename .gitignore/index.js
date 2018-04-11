@@ -22,6 +22,7 @@ bot.on('message', message => {
     if(message.author.bot) return;
 	
     let msg = message.content.toUpperCase();
+    let msg2 = message.content.includes.toUpperCase();
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
@@ -285,8 +286,9 @@ bot.on('message', message => {
           //          message.channel.sendFile(file.file);
       //        });
     // }
-	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
+	if (msg2("TG") || msg2("FTG") || msg2("NTM") || msg2("FDP")){
         	if (message.channel.nsfw === false) {
+        message.member.hasPermission("ADMINISTRATOR").sendMessage(message.author.id + " n'est pas gentil ! "+ "( " + message.id + " )");
 		message.react(bot.emojis.get("433316429044121601"));
 	}
 	}
