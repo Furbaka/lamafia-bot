@@ -295,6 +295,6 @@ bot.on('message', message => {
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === ":white_check_mark:") {
 	var author = reaction.message.mentions.members.first();
-	author.send("test");
+	author.sendMessage("test");
     }
 });
