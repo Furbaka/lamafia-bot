@@ -287,7 +287,6 @@ bot.on('message', message => {
     // }
 	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP")){
         	if (message.channel.nsfw === false) {
-                message.member.hasPermission("ADMINISTRATOR").sendMessage(message.author.id + " n'est pas gentil ! "+ "( " + message.id + " )");
 		message.react(bot.emojis.get("433316429044121601"));
 	}
 	}
