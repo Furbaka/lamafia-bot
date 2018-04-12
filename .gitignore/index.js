@@ -291,3 +291,9 @@ bot.on('message', message => {
 	}
 	}
 });
+
+bot.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === ":white_check_mark:") {
+    reaction.message.mentions.members.first.send("kuku");
+    }
+});
