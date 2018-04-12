@@ -266,7 +266,7 @@ bot.on('message', message => {
             .setTitle("RECHERCHE DE JOUEURS")
 	    .setDescription("Recherche par "+ message.author)
 	    .setThumbnail("https://images.emojiterra.com/emojione/v2/128px/1f579.png")
-            .addField("Joue à " + thingToEcho + " ", "Réagissez avec ${multi} si vous êtes intéressé(e)", false)
+            .addField(`Joue à ` + thingToEcho + ` `, `Réagissez avec ${multi} si vous êtes intéressé(e)`, false)
             .setColor("0xB40404")
             .setTimestamp();
         message.channel.sendEmbed(embed)
@@ -299,8 +299,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 	
 var multi = bot.emojis.get("434047602602803200");
 	
-    if(reaction.emoji.name === multi) {
-	var multi = bot.emojis.get("434047602602803200");
+    if(reaction.emoji.name === ":multi:") {
 	var author = reaction.message.mentions.members.first();
 	var reactor = reaction.user
 	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
