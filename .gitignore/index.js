@@ -295,7 +295,7 @@ bot.on('message', message => {
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "✅") {
 	var author = reaction.message.mentions.members.first();
-	var reactor = reaction.user.id
+	var reactor = reaction.user
 	author.sendMessage( "<@" + reactor + ">" + " est partant pour une partie avec toi !");
     }
 });
