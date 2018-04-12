@@ -293,8 +293,8 @@ bot.on('message', message => {
 });
 
 bot.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === ":white_check_mark:") {
+    if(reaction.emoji.name === "✅") {
 	var author = reaction.message.mentions.members.first();
-	author.sendMessage("test");
+	author.sendMessage("✅");
     }
 });
