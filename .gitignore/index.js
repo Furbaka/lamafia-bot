@@ -296,7 +296,11 @@ bot.on('message', message => {
 });
 
 bot.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === "✅") {
+	
+var multi = bot.emojis.get("434047602602803200");
+	
+    if(reaction.emoji.name === multi) {
+	var multi = bot.emojis.get("434047602602803200");
 	var author = reaction.message.mentions.members.first();
 	var reactor = reaction.user
 	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
