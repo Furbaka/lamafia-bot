@@ -72,7 +72,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "avatar") {
      // Send the user's avatar URL
-        message.channel.sendFile(message.author.avatarURL);
+        message.channel.send(message.author.avatarURL);
     }
         
     if (message.content === prefix + "troprigolo"){
