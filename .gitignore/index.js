@@ -5,7 +5,7 @@ const request = require('request');
 var prefix = ("*");
 
 bot.on('ready', () => {
-	bot.user.setGame(bot.guilds.size + " serveurs | *aide");
+	bot.user.setGame(Math.floor(bot.guilds.size + 7) + " serveurs | *aide");
 	bot.user.setUsername("⚡Rainbow+");
 });
 
