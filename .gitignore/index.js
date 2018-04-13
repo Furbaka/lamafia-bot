@@ -187,13 +187,13 @@ bot.on('message', message => {
 										"Tu as 2 poussin t'en veux 1 bas t'en **POUSSIN**",
 										"Qu'est ce qui est jaune est qui attend ?\n**Jonathan**",
 		       								"Quelle est la plus intelligente, la blonde, la rousse ou la brune ?\n**La rousse** parce que c’est un dictionnaire.",
-										"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!e",
+										"Un fils demande à son père :\n- Papa,c'est quoi la beauté?\n- Tu vois ta mère ?\n- Oui\n- Et ben c'est pas ça!",
 		       								"Un monsieur visite un musée. Soudain il s'arrête et dit au guide :\n- Ah, c'est moche !\n- C'est du Picasso, répond le guide.\nPlus loin, il s'écrie de nouveau :\n- Ah, c'est vraiment moche !\n- Ca Monsieur, c'est un miroir !",
 										"Un jour Dieu dit à Casto de ramer.\nEt depuis, **Castorama**...",
 		       								"2 arabes sont devant une porte, qui sonne ?\nL'alarme.",
 										"Qui a creusé le grand canyon ?\nUn juif qui a perdu 20 centimes.",
 										"Que dit-on a un arabe en costard cravate ?\n- Accusé levez-vous.",
-		       								"Qu'est-ce qu'un arabe à la mer ? \nLa pollution\n\nQu'est-ce que tous arabes à la mer ?\nLa sollution",
+		       								"Qu'est-ce qu'un arabe à la mer ? \nLa pollution\n\nQu'est-ce que tous les arabes à la mer ?\nLa sollution",
 		       								"Un juif va dans une pizzeria le pizzaiolo lui demande \"Votre pizza vous la préférez cuite au feu de bois ou au gaz ?\"",
 		       								"Les juifs , c'est comme le chaussures y'en a plus en 39 qu'en 45",
 		       								"Pourquoi les petits chinois ne croient-ils pas au Père Noël ?\nParce que ce sont eux qui fabriquent les jouets !",
@@ -303,7 +303,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 	
 var multi = bot.emojis.get("434047602602803200");
 	
-    if(reaction.emoji.name === ":multi:") {
+    if(reaction.emoji.get === "434047602602803200") {
 	var author = reaction.message.mentions.members.first();
 	var reactor = reaction.user
 	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
