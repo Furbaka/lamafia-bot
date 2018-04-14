@@ -297,7 +297,7 @@ bot.on('message', message => {
 		message.react(bot.emojis.get("433316429044121601"));
 	}
 	}
-	if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
+	if (message.content.includes("<@178994276951261184>")) {
     	var sayings = ["jui mort X)",
 										"Ferarpasser c ouf",
 										"abonné vou",
