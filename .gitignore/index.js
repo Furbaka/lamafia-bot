@@ -176,7 +176,10 @@ bot.on('message', message => {
 										"C'est pas drôle",
 		       								"C'est pas ouf en faites, jcp pourquoi tu trouve ca drôle",
 										"Ahah",
-		       								"jui mort x)"];
+		       								"jui mort x)",
+		      								"Tu rigole au pif?",
+										"Attention, vous allez recevoir 100 exemplaires de ***l'humour pour les nuls***",
+										"Juste c'est pas drôle en vrai"];
 
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
