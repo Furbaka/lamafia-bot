@@ -98,7 +98,7 @@ bot.on('message', message => {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes(" DAB") || message.content.includes(" dab")){
+    if (message.content.includes(" DAB ") || message.content.includes(" dab ")){
 	var knuckles = bot.emojis.get("432968588383748116");
 	var lolidragon = bot.emojis.get("433289550375419904");
 	var dab = bot.emojis.get("432915228947120129");
@@ -117,7 +117,7 @@ bot.on('message', message => {
     if (message.content.includes(" HEURE") || message.content.includes(" heure")) {
 	   message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
+    if (message.content.includes("WOW ") || message.content.includes("WAW ") || message.content.includes("wow ") || message.content.includes("waw ")){
         message.reply("T'as vu, c'est dingue !");
     }
 
@@ -295,7 +295,7 @@ bot.on('message', message => {
           //          message.channel.sendFile(file.file);
       //        });
     // }
-	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP") || message.content.includes("PUTE") || message.content.includes("SALOPE") || message.content.includes("CONNARD") || message.content.includes("SALOP") || message.content.includes("PUTAIN") || message.content.includes("TA GUEULE") || message.content.includes("BITE") || message.content.includes("CUL") || message.content.includes("tg") || message.content.includes("ftg") || message.content.includes("ntm") || message.content.includes("FDP") || message.content.includes("PUTE") || message.content.includes("SALOPE") || message.content.includes("CONNARD") || message.content.includes("salop") || message.content.includes("putain") || message.content.includes("ta gueule") || message.content.includes("bite") || message.content.includes("cul")){
+	if (message.content.includes("TG ") || message.content.includes("FTG ") || message.content.includes("NTM ") || message.content.includes("FDP ") || message.content.includes("PUTE ") || message.content.includes("SALOPE ") || message.content.includes("CONNARD ") || message.content.includes("SALOP ") || message.content.includes("PUTAIN ") || message.content.includes("TA GUEULE ") || message.content.includes("BITE ") || message.content.includes("CUL ") || message.content.includes("tg ") || message.content.includes("ftg ") || message.content.includes("ntm ") || message.content.includes("fdp ") || message.content.includes("pute ") || message.content.includes("salope ") || message.content.includes("connard ") || message.content.includes("salop ") || message.content.includes("putain ") || message.content.includes("ta gueule ") || message.content.includes("bite ") || message.content.includes("cul ")){
         	if (message.channel.nsfw === false) {
 		message.react(bot.emojis.get("433316429044121601"));
 	}
