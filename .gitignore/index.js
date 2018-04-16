@@ -316,6 +316,7 @@ bot.on('message', message => {
 	
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
                 return;
+	}
             
 	message.delete();
 	    
@@ -334,8 +335,6 @@ bot.on('message', message => {
         message.react("❌");
      });
      }
-    }
-
 });
 
 bot.on('messageReactionAdd', (reaction, user) => {
