@@ -311,6 +311,31 @@ bot.on('message', message => {
 			var result = Math.floor((Math.random() * sayings.length) + 0);
 			message.channel.sendMessage(sayings[result]);
     }
+	
+    if (message.content.startsWith(prefix + "supersondage")) {
+	
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+            
+	message.delete();
+	    
+        let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ");
+        var embed = new Discord.RichEmbed()
+            .setTitle("SONDAGE")
+	    .setDescription("Question de " + message.author + "pour @everyone")
+	    .setThumbnail("https://qph.fs.quoracdn.net/main-qimg-49b8b38b8301a67c52f18ab79d927827.webp")
+            .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
+            .setColor("0xB40404")
+            .setTimestamp();
+        message.channel.sendEmbed(embed)
+        .then(function (message) {
+        message.react("✅");
+        message.react("❌");
+     });
+     }
+    }
+
 });
 
 bot.on('messageReactionAdd', (reaction, user) => {
