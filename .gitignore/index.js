@@ -98,7 +98,7 @@ bot.on('message', message => {
         message.reply("Arrête de parler de bouffe j'ai faim :/");
     }
     
-    if (message.content.includes(" DAB ") || message.content.includes(" dab ")){
+    if (message.content.includes(" DAB") || message.content.includes(" dab")){
 	var knuckles = bot.emojis.get("432968588383748116");
 	var lolidragon = bot.emojis.get("433289550375419904");
 	var dab = bot.emojis.get("432915228947120129");
@@ -117,7 +117,7 @@ bot.on('message', message => {
     if (message.content.includes(" HEURE") || message.content.includes(" heure")) {
 	   message.channel.sendMessage("L'HEURE DE T'ACHETER UNE MONTRE !");
     }
-    if (message.content.includes("WOW ") || message.content.includes("WAW ") || message.content.includes("wow ") || message.content.includes("waw ")){
+    if (message.content.includes("WOW") || message.content.includes("WAW") || message.content.includes("wow") || message.content.includes("waw")){
         message.reply("T'as vu, c'est dingue !");
     }
 
