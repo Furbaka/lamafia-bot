@@ -70,9 +70,9 @@ bot.on('message', message => {
 
     }
 
-    if (message.content === prefix + "avatar") {
+    if (message.content.startsWith(prefix + "avatar")) {
      // Send the user's avatar URL
-        message.channel.send(message.author.avatarURL);
+        message.channel.send(message.mentions.members.first().avatarURL);
     }
         
     if (message.content === prefix + "troprigolo"){
