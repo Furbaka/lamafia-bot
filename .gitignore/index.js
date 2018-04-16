@@ -39,7 +39,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle("SONDAGE")
 	    .setDescription("Question de "+ message.author)
-	    .setThumbnail("http://ecolybride.fr/wp-content/uploads/2016/09/question-reponse-enfant2-300x300.png")
+	    .setThumbnail("https://qph.fs.quoracdn.net/main-qimg-49b8b38b8301a67c52f18ab79d927827.webp")
             .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
             .setColor("0xB40404")
             .setTimestamp();
@@ -323,8 +323,8 @@ bot.on('message', message => {
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ");
         var embed = new Discord.RichEmbed()
-            .setTitle("SONDAGE")
-	    .setDescription("Question de " + message.author + "pour @everyone")
+            .setTitle("SUPER SONDAGE")
+	    .setDescription("Question de " + message.author + " pour @everyone")
 	    .setThumbnail("https://qph.fs.quoracdn.net/main-qimg-49b8b38b8301a67c52f18ab79d927827.webp")
             .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
             .setColor("0xB40404")
