@@ -199,7 +199,8 @@ bot.on('message', message => {
             .setTitle("😂")
             .setDescription("Blague pour " + message.author)
             .addField("Blague", sayings[result], true)
-            .setColor("0xF4D14F");
+            .setColor("0xF4D14F")
+	    .setTimestamp();
     
             message.channel.sendEmbed(embedX);
     }
