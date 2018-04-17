@@ -206,13 +206,13 @@ bot.on('message', message => {
             
             var embedX = new Discord.RichEmbed()
             .setThumbnail(bot.user.avatarURL)
-            .setTitle("Blague")
-            .setDescription("Pour " + message.author)
-            .addField("🤣", sayings[result], true)
+            .setTitle("😂" + message.timestamp )
+            .setDescription("Blague pour " + message.author)
+            .addField(sayings[result], "" , true)
             .setColor("0xF4D14F")
             .setFooter("BOT CRÉÉ PAR MISTIGRIX");
     
-            message.member.sendEmbed(embedX);
+            message.channel.sendEmbed(embedX);
     }
 	
     if (msg.startsWith(prefix + 'SUPPR')) {
