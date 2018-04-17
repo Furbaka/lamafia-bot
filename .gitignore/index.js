@@ -210,7 +210,7 @@ bot.on('message', message => {
             .setThumbnail(bot.user.avatarURL)
             .setTitle("😂")
             .setDescription("Blague pour " + message.author)
-            .addField(sayings[result], "" , true)
+            .addField("Blague", sayings[result], true)
             .setColor("0xF4D14F")
             .setFooter("BOT CRÉÉ PAR MISTIGRIX");
     
