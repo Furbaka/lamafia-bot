@@ -208,7 +208,7 @@ bot.on('message', message => {
             
             var embedX = new Discord.RichEmbed()
             .setThumbnail(bot.user.avatarURL)
-            .setTitle("😂" + message.timestamp )
+            .setTitle("😂")
             .setDescription("Blague pour " + message.author)
             .addField(sayings[result], "" , true)
             .setColor("0xF4D14F")
