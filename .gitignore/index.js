@@ -36,14 +36,14 @@ bot.on('message', message => {
 	    
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ");
-        var embed = new Discord.RichEmbed()
+        var embedS = new Discord.RichEmbed()
             .setTitle("SONDAGE")
 	    .setDescription("Question de "+ message.author)
 	    .setThumbnail("https://qph.fs.quoracdn.net/main-qimg-49b8b38b8301a67c52f18ab79d927827.webp")
             .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
             .setColor("0xB40404")
             .setTimestamp();
-        message.channel.sendEmbed(embed)
+        message.channel.sendEmbed(embedS)
         .then(function (message) {
         message.react("✅");
         message.react("❌");
@@ -70,9 +70,9 @@ bot.on('message', message => {
 
     }
 
-    if (message.content.startsWith(prefix + "avatar")) {
+    if (message.content == prefix + "avatar") {
      // Send the user's avatar URL
-        message.channel.send(message.mentions.members.first().avatarURL);
+        message.channel.send(message.author.avatarURL);
     }
         
     if (message.content === prefix + "troprigolo"){
@@ -295,7 +295,7 @@ bot.on('message', message => {
           //          message.channel.sendFile(file.file);
       //        });
     // }
-	if (message.content.includes("TG ") || message.content.includes("FTG ") || message.content.includes("NTM ") || message.content.includes("FDP ") || message.content.includes("PUTE ") || message.content.includes("SALOPE ") || message.content.includes("CONNARD ") || message.content.includes("SALOP ") || message.content.includes("PUTAIN ") || message.content.includes("TA GUEULE ") || message.content.includes("BITE ") || message.content.includes("CUL ") || message.content.includes("tg ") || message.content.includes("ftg ") || message.content.includes("ntm ") || message.content.includes("fdp ") || message.content.includes("pute ") || message.content.includes("salope ") || message.content.includes("connard ") || message.content.includes("salop ") || message.content.includes("putain ") || message.content.includes("ta gueule ") || message.content.includes("bite ") || message.content.includes("cul ")){
+	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP") || message.content.includes("PUTE") || message.content.includes("SALOPE") || message.content.includes("CONNARD") || message.content.includes("SALOP") || message.content.includes("PUTAIN") || message.content.includes("TA GUEULE") || message.content.includes("BITE") || message.content.includes("CUL") || message.content.includes("tg") || message.content.includes("ftg") || message.content.includes("ntm") || message.content.includes("fdp") || message.content.includes("pute") || message.content.includes("salope") || message.content.includes("connard") || message.content.includes("salop") || message.content.includes("putain") || message.content.includes("ta gueule") || message.content.includes("bite") || message.content.includes("cul")){
         	if (message.channel.nsfw === false) {
 		message.react(bot.emojis.get("433316429044121601"));
 	}
@@ -345,5 +345,15 @@ var multi = bot.emojis.get("434047602602803200");
 	var author = reaction.message.mentions.members.first();
 	var reactor = reaction.user
 	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
+    }
+	
+    if (message.content === prefix + "aide nsfw"){
+        var embed2 = new Discord.RichEmbed()
+		.setThumbnail("http://holly.paheal.net/_images/10f3ed7efc2c3e737b34d755870197b4/2554566%20-%20ELZZombie%20Friendship_is_Magic%20My_Little_Pony%20Rainbow_Dash.png")
+		.setTitle("A VENIR")
+		.setDescription("A BIENTOT MES GROS COCHONS !")
+		.setColor("cc55ee")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX, le trop gros cochon !")
+        message.channel.sendEmbed(embed2);
     }
 });
