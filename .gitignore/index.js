@@ -186,7 +186,9 @@ bot.on('message', message => {
     }
 	
     if (message.content == prefix + "blague") {
-
+	    
+	message.delete();
+	    
     	var sayings = ["Un homme et un chien sont sur une barque le chien pète, l'homme tombe à l'eau et se noit. Quelle est la race du chien?\n**Un pékinois**",
 										"Tu as 2 poussin t'en veux 1 bas t'en **POUSSIN**",
 										"Qu'est ce qui est jaune est qui attend ?\n**Jonathan**",
