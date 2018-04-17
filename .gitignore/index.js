@@ -186,6 +186,7 @@ bot.on('message', message => {
     }
 	
     if (message.content == prefix + "blague") {
+
     	var sayings = ["Un homme et un chien sont sur une barque le chien pète, l'homme tombe à l'eau et se noit. Quelle est la race du chien?\n**Un pékinois**",
 										"Tu as 2 poussin t'en veux 1 bas t'en **POUSSIN**",
 										"Qu'est ce qui est jaune est qui attend ?\n**Jonathan**",
@@ -201,8 +202,17 @@ bot.on('message', message => {
 		       								"Les juifs , c'est comme le chaussures y'en a plus en 39 qu'en 45",
 		       								"Pourquoi les petits chinois ne croient-ils pas au Père Noël ?\nParce que ce sont eux qui fabriquent les jouets !",
 										"Quel est le sport préféré des Anglais ?\nLe football.\n\nQuel est le sport préféré des Australiens ?\nLe rugby.\n\nQuel est le sport préféré des Français ?\nLa pétanque.\n\nQuel est le sport préféré des Arabes ?\nTous les sports hippiques.\n**Hippique** tout..."];
-			var result = Math.floor((Math.random() * sayings.length) + 0);
-			message.channel.sendMessage(sayings[result]);
+            var result = Math.floor((Math.random() * sayings.length) + 0);
+            
+            var embedX = new Discord.RichEmbed()
+            .setThumbnail(bot.user.avatarURL)
+            .setTitle("Blague")
+            .setDescription("Pour " + message.author)
+            .addField("", sayings[result], true)
+            .setColor("0xF4D14F")
+            .setFooter("BOT CRÉÉ PAR MISTIGRIX");
+    
+            message.member.sendEmbed(embedX);
     }
 	
     if (msg.startsWith(prefix + 'SUPPR')) {
