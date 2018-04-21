@@ -356,7 +356,7 @@ if (message.content.startsWith(prefix + "annonce")){
 	 
         var embed2 = new Discord.RichEmbed()
 		.setThumbnail("./annonce.png")
-		.setTitle("@everyone")
+		.setTitle("")
 		.setDescription(thingToEcho)
 		.setColor("0xF4D14F")
         message.channel.sendEmbed(embed2);
