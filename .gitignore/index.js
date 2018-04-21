@@ -345,6 +345,7 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, le trop gros cochon !")
         message.channel.sendEmbed(embed6);
     }
+	
 if (message.content.startsWith(prefix + "annonce")){
 	 
 	let args = message.content.split(" ").slice(1);
@@ -355,8 +356,8 @@ if (message.content.startsWith(prefix + "annonce")){
 	}
 	 
         var embed2 = new Discord.RichEmbed()
-		.setThumbnail(".\annonce.png")
-		.setTitle("")
+		.setThumbnail("https://image.noelshack.com/fichiers/2018/16/6/1524330497-annonce.png")
+		.setTitle(" ")
 		.setDescription(thingToEcho)
 		.setColor("0xF4D14F")
         message.channel.sendEmbed(embed2);
