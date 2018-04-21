@@ -355,7 +355,7 @@ if (message.content.startsWith(prefix + "annonce")){
 	}
 	 
         var embed2 = new Discord.RichEmbed()
-		.setThumbnail("./annonce.png")
+		.setThumbnail(".\annonce.png")
 		.setTitle("")
 		.setDescription(thingToEcho)
 		.setColor("0xF4D14F")
