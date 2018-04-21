@@ -357,8 +357,9 @@ if (message.content.startsWith(prefix + "annonce")){
 	 
         var embed2 = new Discord.RichEmbed()
 		.setThumbnail("https://image.noelshack.com/fichiers/2018/16/6/1524330497-annonce.png")
-		.setTitle(" ")
-		.setDescription(thingToEcho)
+		.setTitle(thingToEcho)
+		.setDescription("@everyone")
+		.setTimestamp()
 		.setColor("0xF4D14F")
         message.channel.sendEmbed(embed2);
     }
