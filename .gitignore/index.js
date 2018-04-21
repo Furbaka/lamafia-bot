@@ -345,18 +345,6 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, le trop gros cochon !")
         message.channel.sendEmbed(embed6);
     }
-});
-
-bot.on('messageReactionAdd', (reaction, user) => {
-	
-var multi = bot.emojis.get("434047602602803200");
-	
-    if(reaction.emoji.identifier === "434047602602803200") {
-	var author = reaction.message.mentions.members.first();
-	var reactor = reaction.user
-	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
-    }
-	
 if message.content.startsWith(prefix + "annonce"){
 	 
 	let args = message.content.split(" ").slice(1);
@@ -374,4 +362,15 @@ if message.content.startsWith(prefix + "annonce"){
         message.channel.sendEmbed(embed2);
     }
 	
+});
+
+bot.on('messageReactionAdd', (reaction, user) => {
+	
+var multi = bot.emojis.get("434047602602803200");
+	
+    if(reaction.emoji.identifier === "434047602602803200") {
+	var author = reaction.message.mentions.members.first();
+	var reactor = reaction.user
+	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
+    }
 });
