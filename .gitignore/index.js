@@ -356,5 +356,22 @@ var multi = bot.emojis.get("434047602602803200");
 	var reactor = reaction.user
 	author.sendMessage( "Quelqu'un est partant pour faire une partie avec toi !");
     }
-
+	
+if message.content.startsWith(prefix + "annonce"){
+	 
+	let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ");
+	 
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+	}
+	 
+        var embed2 = new Discord.RichEmbed()
+		.setThumbnail("https://cdn.discordapp.com/attachments/422512671435390981/437256548604182528/annonce.png")
+		.setTitle("@everyone")
+		.setDescription(thingToEcho)
+		.setColor("0xF4D14F")
+        message.channel.sendEmbed(embed2);
+    }
+	
 });
