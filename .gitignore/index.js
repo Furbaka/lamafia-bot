@@ -345,7 +345,7 @@ bot.on('message', message => {
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, le trop gros cochon !")
         message.channel.sendEmbed(embed6);
     }
-if message.content.startsWith(prefix + "annonce"){
+if (message.content.startsWith(prefix + "annonce")){
 	 
 	let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ");
