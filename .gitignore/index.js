@@ -152,7 +152,7 @@ bot.on('message', message => {
 		.setThumbnail(bot.user.avatarURL)
 		.setTitle("INVITE")
 		.setDescription("AJOUTER LE BOT A VOTRE SERVEUR !")
-		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/lightbot)", true)
+		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/rainbow)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.member.sendEmbed(embed3);
@@ -385,6 +385,14 @@ if (message.content.startsWith(prefix + "annonce")){
 			"https://78.media.tumblr.com/1e360f38949320c356034f713c538db7/tumblr_ot58zvxbQ61wufel2o1_1280.jpg",
 			"https://78.media.tumblr.com/366dbdf0bbb657d058f3544216f5233e/tumblr_ot5125EYlb1wufel2o1_500.jpg",
 			"https://78.media.tumblr.com/935b597ed9602b8df271afbb0c1c824a/tumblr_ot50i07dwj1wufel2o1_1280.jpg",
+		        "https://i.pinimg.com/originals/52/b7/f0/52b7f01566af91c777c6978b00baac47.jpg",
+			"http://www.koakuma.com.mx/wp-content/uploads/2017/07/ch1.jpg",
+			"https://pm1.narvii.com/6146/da74f23110ff8e73dff1f67fdc05ca3980cabe8f_hq.jpg",
+			"https://i.pinimg.com/originals/a1/a5/86/a1a58684fbcd928c62fd86e3cfbb8930.jpg",
+			"https://pm1.narvii.com/6146/8be3160033d147af98a8e585ad103b679b42a4df_hq.jpg",
+			"https://i.pinimg.com/originals/b6/e3/3d/b6e33d65ab445b328b6a6370ee6899d5.jpg",
+			"https://i.pinimg.com/originals/08/19/8b/08198bb619e8a189c4b8c5ac960b4c0b.jpg",
+			"https://i.pinimg.com/originals/f3/1e/36/f31e366a4e3866b623c4b3a9be5394b9.jpg",
 			"https://78.media.tumblr.com/aa805ec86b74ff1fab5725a38bd674b4/tumblr_ot49n6DWku1wufel2o1_1280.jpg"];
             var result = Math.floor((Math.random() * image.length) + 0);
             
