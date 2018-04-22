@@ -337,6 +337,9 @@ bot.on('message', message => {
      }
 	
     if (message.content === prefix + "aide nsfw"){
+	if (message.channel.nsfw === false) {
+	return;}
+	    
         var embed6 = new Discord.RichEmbed()
 		.setThumbnail("http://holly.paheal.net/_images/10f3ed7efc2c3e737b34d755870197b4/2554566%20-%20ELZZombie%20Friendship_is_Magic%20My_Little_Pony%20Rainbow_Dash.png")
 		.setTitle("POUR LES COCHONS 🐷")
