@@ -240,7 +240,7 @@ bot.on('message', message => {
 		.addField("FUN", "`*rigolo` | `*troprigolo` | `*creepy` | `*blague`")
 		.addField("UTILES", "`*info` (pour voir les informations du serveurs)\n`*invite` (pour inviter le bot sur votre serv)\n`*avatar` (pour avoir votre PP)\n`*aide` (bah... pour l'aide quoi.)\n`*news` (pour voir mes nouveautées)\n`*sondage <question>` (pour faire un sondage)")
 		.addField("JEUX", "\`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
-		.addField("PLUS", "Serveur du BOT : [👾 L↓GHT L↑FE 👾](https://discord.gg/apjU2vb)", true)
+		.addField("PLUS", "`*aide nsfw` pour voir des trucs cochons (**seulement dans un channel nsfw**)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
         message.channel.sendEmbed(embed2);
@@ -252,10 +252,10 @@ bot.on('message', message => {
 		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
 		.setTitle("VOICI MES NOUVEAUTÉES !")
 		.setDescription("\n")
-		.addField("AJOUTS", "📌Ajout de la commande : \`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
-		.addField("PATCH", "🌀 Des fois je spammais (encore) :/ 🌀")
+		.addField("AJOUTS", "📌Ajout de la commandes : \`*aide nsfw\` Pour voir des trucs cochons (**seulement dans un channel nsfw**)\nAvec en prime des commandes cochones à découvrir avec celle-ci ! :D")
+		.addField("PATCH", "🌀 Des fois je crashais (encore +) 🌀")
 		.setColor("0xF4D14F")
-		.setFooter("Version 1.3")
+		.setFooter("Version 1.5")
         message.channel.sendEmbed(embed4);
     }	
 	
@@ -339,10 +339,10 @@ bot.on('message', message => {
     if (message.content === prefix + "aide nsfw"){
         var embed6 = new Discord.RichEmbed()
 		.setThumbnail("http://holly.paheal.net/_images/10f3ed7efc2c3e737b34d755870197b4/2554566%20-%20ELZZombie%20Friendship_is_Magic%20My_Little_Pony%20Rainbow_Dash.png")
-		.setTitle("A VENIR")
-		.setDescription("A BIENTOT MES GROS COCHONS !")
+		.setTitle("POUR LES COCHONS 🐷")
+		.setDescription("Vous allez jouir 💦")
+		.addField("Commandes :", "`*nsfw neko` pour avoir des images de petites chattes 😻")
 		.setColor("cc55ee")
-		.setFooter("BOT CRÉÉ PAR MISTIGRIX, le trop gros cochon !")
         message.channel.sendEmbed(embed6);
     }
 	
@@ -360,7 +360,7 @@ if (message.content.startsWith(prefix + "annonce")){
 		.setTitle(thingToEcho)
 		.setDescription("@everyone")
 		.setTimestamp()
-		.setColor("0xF4D14F")
+		.setColor("cc55ee")
         message.channel.sendEmbed(embed2);
     }
 
@@ -388,7 +388,7 @@ if (message.content.startsWith(prefix + "annonce")){
             var embedX = new Discord.RichEmbed()
 	    .setImage(image[result])
             .setColor("0xF4D14F")
-	    .setFooter("pour " + message.author.name , message.author.avatarURL)
+	    .setFooter("pour " + message.author.username , message.author.avatarURL)
     
             message.channel.sendEmbed(embedX);
     }
