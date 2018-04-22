@@ -30,6 +30,7 @@ bot.on('message', message => {
     
 	
 	if (message.content.startsWith(prefix + "fnbr shop")) {
+	message.delete();
 		var embedX = new Discord.RichEmbed()
 	    .setImage("http://orcz.com/images/c/cc/FortniteBattleRoyaleItemShopScreen.jpg")
             .setColor("0xF4D14F")
