@@ -363,6 +363,36 @@ if (message.content.startsWith(prefix + "annonce")){
 		.setColor("0xF4D14F")
         message.channel.sendEmbed(embed2);
     }
+
+    if (message.content == prefix + "nsfw neko") {
+	    
+	  
+	    
+	message.delete();
+	
+	if (message.channel.nsfw === false) {
+		return;}
+	   
+    	var image = ["http://metbuat.info/imgs/33db34b34c1420befa0537413d9d27bf.jpg",
+			"https://i.redditmedia.com/Zy0aR4AjdHUoNYFuEo2FKbwxKtRZsuLyB_ZZlULWK4w.jpg?w=543&s=5cba179b12aaf08dab9e97256bd9dc2e",
+			"http://besthentaipics.com/plog-content/images/best-hentai-pictures/hentai-babes/animal-ears-hentai-cat-girl-neko-nude-butt-breasts-tits-anime-hentai.jpg",
+			"https://i.pinimg.com/originals/3f/fa/b9/3ffab95e2b01f6b4c76da3f43a3ca4d7.jpg",
+			"https://pbs.twimg.com/media/BVXoUzfCcAIOBV0.jpg",
+			"https://78.media.tumblr.com/4b529686cefb03172ac811b1599a6820/tumblr_otdcscDWFP1wufel2o1_1280.jpg",
+			"https://78.media.tumblr.com/1e360f38949320c356034f713c538db7/tumblr_ot58zvxbQ61wufel2o1_1280.jpg",
+			"https://78.media.tumblr.com/366dbdf0bbb657d058f3544216f5233e/tumblr_ot5125EYlb1wufel2o1_500.jpg",
+			"https://78.media.tumblr.com/935b597ed9602b8df271afbb0c1c824a/tumblr_ot50i07dwj1wufel2o1_1280.jpg",
+			"https://78.media.tumblr.com/aa805ec86b74ff1fab5725a38bd674b4/tumblr_ot49n6DWku1wufel2o1_1280.jpg"];
+            var result = Math.floor((Math.random() * image.length) + 0);
+            
+            var embedX = new Discord.RichEmbed()
+	    .setImage(image[result])
+            .setColor("0xF4D14F")
+	    .setFooter("pour " + message.author , message.author.avatarURL)
+    
+            message.channel.sendEmbed(embedX);
+    }
+	
 	
 });
 
