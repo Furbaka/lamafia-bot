@@ -388,7 +388,7 @@ if (message.content.startsWith(prefix + "annonce")){
             var embedX = new Discord.RichEmbed()
 	    .setImage(image[result])
             .setColor("0xF4D14F")
-	    .setFooter("pour " + message.author , message.author.avatarURL)
+	    .setFooter("pour " + message.author.name , message.author.avatarURL)
     
             message.channel.sendEmbed(embedX);
     }
