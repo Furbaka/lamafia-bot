@@ -29,6 +29,15 @@ bot.on('message', message => {
 
     
 	
+	if (message.content.startsWith(prefix + "fnbr shop")) {
+		var embedX = new Discord.RichEmbed()
+	    .setImage("http://orcz.com/images/c/cc/FortniteBattleRoyaleItemShopScreen.jpg")
+            .setColor("0xF4D14F")
+	    .setFooter("pour " + message.author.username , message.author.avatarURL)
+    
+            message.channel.sendEmbed(embedX);
+		
+	}
 	
     if (message.content.startsWith(prefix + "sondage")) {
 	    
