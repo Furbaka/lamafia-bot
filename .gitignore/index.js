@@ -415,6 +415,7 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG")){
+		message.delete();
         	var embed = new Discord.RichEmbed()
 			.setThumbnail("http://i0.kym-cdn.com/photos/images/original/000/582/962/764.gif")
 			.setTitle("GG !")
