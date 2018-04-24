@@ -418,6 +418,7 @@ if (message.content.startsWith(prefix + "annonce")){
 		message.delete();
 		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
+			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
 			.setTitle("Bien ouèj !")
 			.setDescription(message.author + " félicite " + message.mentions.members.first() + "!")
@@ -431,6 +432,7 @@ if (message.content.startsWith(prefix + "annonce")){
 		message.delete();
 		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
+			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("https://orig00.deviantart.net/a222/f/2013/044/1/8/random_by_volteon999-d5utv80.gif")
 			.setTitle("Bonne chance !")
 			.setDescription(message.author + " souhaite bonne chance à " + message.mentions.members.first() + "!")
