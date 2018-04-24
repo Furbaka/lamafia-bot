@@ -416,10 +416,12 @@ if (message.content.startsWith(prefix + "annonce")){
 
  	if (msg.startsWith("GG")){
 		message.delete();
+		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
-			.setThumbnail("http://i0.kym-cdn.com/photos/images/original/000/582/962/764.gif")
-			.setTitle("GG !")
+			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
+			.setTitle("GG " + nam.username + " !")
 			.setDescription(message.author + " félicite " + message.mentions.members.first() + "!")
+			.setColor("0xF4D14F")
        		message.channel.sendEmbed(embed);
     
 
