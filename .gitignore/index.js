@@ -419,7 +419,7 @@ if (message.content.startsWith(prefix + "annonce")){
 		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
 			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
-			.setTitle("GG " + nam.username + " !")
+			.setTitle("Bien ouèj !")
 			.setDescription(message.author + " félicite " + message.mentions.members.first() + "!")
 			.setColor("0xF4D14F")
        		message.channel.sendEmbed(embed);
