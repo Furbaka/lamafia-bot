@@ -415,11 +415,9 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG ")){
-		if (!message.content == "GG " + message.mentions.members.first()){
-		return;
-		}
 		message.delete();
 		var nam = message.mentions.members.first();
+		if (!message.content == "GG " + nam){
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
@@ -427,6 +425,7 @@ if (message.content.startsWith(prefix + "annonce")){
 			.setDescription(message.author + " félicite " + message.mentions.members.first() + "!")
 			.setColor("0xF4D14F")
        		message.channel.sendEmbed(embed);
+		}
     
 
     }
