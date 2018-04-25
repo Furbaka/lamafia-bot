@@ -415,6 +415,10 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG ")){
+		if (message.mentions.first() = undefinied){
+
+		return;
+		}
 		message.delete();
 		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
@@ -429,13 +433,17 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
 	if (msg.startsWith("GL ")){
+		if (message.mentions.first() = undefinied){
+
+		return;
+		}
 		message.delete();
 		var nam = message.mentions.members.first();
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("https://orig00.deviantart.net/a222/f/2013/044/1/8/random_by_volteon999-d5utv80.gif")
 			.setTitle("Bonne chance !")
-			.setDescription(message.author + " souhaite bonne chance à " + message.mentions.members.first() + "!")
+			.setDescription(message.author + " souhaite bonne chance à " + message.mentions.members.first() + " !")
 			.setColor("417b3e")
        		message.channel.sendEmbed(embed);
     
