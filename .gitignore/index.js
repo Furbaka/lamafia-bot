@@ -415,8 +415,7 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG ")){
-		if (message.mentions.members.first() = undefined){
-
+		if (!message.content == "GG " + message.mentions.members.first()){
 		return;
 		}
 		message.delete();
