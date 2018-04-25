@@ -442,7 +442,7 @@ if (message.content.startsWith(prefix + "annonce")){
 
 	if (msg.startsWith("GL ")){
 		var nam = message.mentions.members.first();
-		if (message.content == "gg " + nam){
+		if (message.content == "gl " + nam){
 		message.delete();
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
@@ -452,7 +452,7 @@ if (message.content.startsWith(prefix + "annonce")){
 			.setColor("417b3e")
        		message.channel.sendEmbed(embed);
 		}
-		if (message.content == "GG " + nam){
+		if (message.content == "GL " + nam){
 		message.delete();
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
