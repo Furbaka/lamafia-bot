@@ -415,9 +415,18 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG ")){
-		message.delete();
 		var nam = message.mentions.members.first();
 		if (message.content == "GG " + nam){
+		message.delete();
+        	var embed = new Discord.RichEmbed()
+			.setAuthor(" ", message.author.avatarURL)
+			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
+			.setTitle("Bien ouèj !")
+			.setDescription(message.author + " félicite " + message.mentions.members.first() + "!")
+			.setColor("0xF4D14F")
+       		message.channel.sendEmbed(embed);
+		}
+		if (message.content == "gg " + nam){
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("http://image.noelshack.com/fichiers/2017/19/1494546676-tumblr-nm6cjahjur1upa971o1-400.gif")
@@ -431,12 +440,9 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
 	if (msg.startsWith("GL ")){
-		if (message.mentions.members.first() = undefined){
-
-		return;
-		}
-		message.delete();
 		var nam = message.mentions.members.first();
+		if (message.content == "gg " + nam){
+		message.delete();
         	var embed = new Discord.RichEmbed()
 			.setAuthor(" ", message.author.avatarURL)
 			.setThumbnail("https://orig00.deviantart.net/a222/f/2013/044/1/8/random_by_volteon999-d5utv80.gif")
@@ -444,7 +450,17 @@ if (message.content.startsWith(prefix + "annonce")){
 			.setDescription(message.author + " souhaite bonne chance à " + message.mentions.members.first() + " !")
 			.setColor("417b3e")
        		message.channel.sendEmbed(embed);
-    
+		}
+		if (message.content == "GG " + nam){
+		message.delete();
+        	var embed = new Discord.RichEmbed()
+			.setAuthor(" ", message.author.avatarURL)
+			.setThumbnail("https://orig00.deviantart.net/a222/f/2013/044/1/8/random_by_volteon999-d5utv80.gif")
+			.setTitle("Bonne chance !")
+			.setDescription(message.author + " souhaite bonne chance à " + message.mentions.members.first() + " !")
+			.setColor("417b3e")
+       		message.channel.sendEmbed(embed);
+		}
 
     }
 	
