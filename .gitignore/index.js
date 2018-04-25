@@ -415,7 +415,7 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
  	if (msg.startsWith("GG ")){
-		if (message.mentions.members.first() = undefinied){
+		if (message.mentions.members.first() = undefined){
 
 		return;
 		}
@@ -433,7 +433,7 @@ if (message.content.startsWith(prefix + "annonce")){
     }
 
 	if (msg.startsWith("GL ")){
-		if (message.mentions.members.first() = undefinied){
+		if (message.mentions.members.first() = undefined){
 
 		return;
 		}
