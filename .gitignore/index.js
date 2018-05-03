@@ -471,7 +471,7 @@ if (message.content.startsWith(prefix + "annonce")){
 		var embedX = new Discord.RichEmbed()
 	    .setTitle("FORTNITE | PASSE DE COMBAT")
 	    .setDescription("SAISON 4")
-	    .setImage("https://lh5.googleusercontent.com/bnStrS-VVRiLiXyf5Wy3XKLluc-dij7RKUZTT_JKJ430CAJXtgUv09nBUO6zQEEQA-5-hdSPVjlX2hgafNGT=w1366-h613-rw")
+	    .setImage("https://drive.google.com/file/d/1-J_txaZgXC0FckxmjjUcL9G6pTCSpDK_/view?usp=sharing")
             .setColor("0xF4D14F")
 	    .setFooter("pour " + message.author.username , message.author.avatarURL)
     
