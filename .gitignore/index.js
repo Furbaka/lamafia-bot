@@ -464,7 +464,20 @@ if (message.content.startsWith(prefix + "annonce")){
 		}
 
     }
+
 	
+	if (message.content.startsWith(prefix + "fnbr pass")) {
+	message.delete();
+		var embedX = new Discord.RichEmbed()
+	    .setTitle("FORTNITE | PASSE DE COMBAT")
+	    .setDescription("SAISON 4")
+	    .setImage("https://lh5.googleusercontent.com/bnStrS-VVRiLiXyf5Wy3XKLluc-dij7RKUZTT_JKJ430CAJXtgUv09nBUO6zQEEQA-5-hdSPVjlX2hgafNGT=w1366-h613-rw")
+            .setColor("0xF4D14F")
+	    .setFooter("pour " + message.author.username , message.author.avatarURL)
+    
+            message.channel.sendEmbed(embedX);
+		
+	}
 	
 });
 
