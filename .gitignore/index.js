@@ -5,7 +5,7 @@ const request = require('request');
 var prefix = (":lamafia:");
 
 bot.on('ready', () => {
-	bot.user.setGame(message.guild.memberCount + " membres");
+	bot.user.setGame(message.guild.memberCount + ' membres');
 
 });
 
