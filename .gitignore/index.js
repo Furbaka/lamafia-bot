@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
 
-var prefix = ("*");
+var prefix = (":lamafia");
 
 bot.on('ready', () => {
-	bot.user.setGame(bot.guilds.size + " serveurs | *aide");
+	bot.user.setGame(message.guild.memberCount + " utilisateurs");
 });
 
 
